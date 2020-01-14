@@ -9,15 +9,21 @@ currentPos([3, 4]).
 
 +!ask_for_coordinates <-
     .print("Asking for garbage coordinates...");
-    .send(garbage_sensor, achieve, give_coordinates("Location please")).
+    .send(garbage_sensor, achieve, receive_query("Location please")).
 
 
 +!receive_coordinates(XY_new)[source(Sender)] : garbageAt(XY) <-
     .print("Received garbage coordinates: ", XY_new);
     +garbageAt(XY_new);
     -garbageAt(XY);
+    !process_coordinates.
+
++!process_coordinates: garbageAt([X, Y]) <-
     +garbageOnFloor;
     !move.
+
++!process_coordinates: garbageAt([]) <-
+    .print("All cleaned up").
 
 
 +!move : garbageAt([A, B]) & currentPos([X, Y]) & X < A <-
@@ -64,7 +70,8 @@ currentPos([3, 4]).
 +!pickup : .random(S) & S<0.5 <-
     -garbageOnFloor;
     +garbageInHand;
-    .print("Picked up").
+    .print("Picked up");
+    !ask_for_coordinates.
 
 
 +!pickup : garbageOnFloor <-
