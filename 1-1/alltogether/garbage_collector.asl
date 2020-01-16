@@ -9,7 +9,8 @@ currentPos([3, 4]).
 
 +!ask_for_coordinates <-
     .print("Asking for garbage coordinates...");
-    .send(garbage_sensor, achieve, receive_query("Location please")).
+    .send(garbage_sensor, achieve, receive_query("Location please"));
+    .print("Query sent").
 
 
 +!receive_coordinates(XY_new)[source(Sender)] : garbageAt(XY) <-

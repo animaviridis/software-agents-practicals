@@ -8,7 +8,8 @@ locations([[5,6], [1,2], [3,3]]).
     .print("Passing garbage coordinates: ", XY);
     -locations([H|T]);
     +locations(T);
-    .send(garbage_collector, achieve, receive_coordinates(XY)).
+    .send(garbage_collector, achieve, receive_coordinates(XY));
+    .print("Sent").
 
 +!send_coordinates : locations([]) <-
     .print("No more garbage");
