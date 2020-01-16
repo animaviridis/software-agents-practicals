@@ -26,6 +26,13 @@ def vote_borda(data: pd.DataFrame):
     return data.sum()
 
 
+def vote_runoff(data: pd.DataFrame):
+    first_round_scores = vote_plurality(data)
+    second_round_data = data[first_round_scores.index[:2]]
+    second_round_scores = vote_plurality(second_round_data)
+    return second_round_scores[0:1]  # the winner as a pd.Series
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-fname', type=str, default=r"..\1-3\countries.xlsx")
@@ -35,4 +42,5 @@ if __name__ == '__main__':
     d = import_data(parsed_args.fname, parsed_args.sheet)
     print(f"\nPlurality vote:\n{vote_plurality(d)}")
     print(f"\nBorda count vote:\n{vote_borda(d)}")
+    print(f"\nRunoff vote (2 rounds): {vote_runoff(d)}")
 
