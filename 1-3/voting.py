@@ -1,5 +1,7 @@
 import pandas as pd
 import argparse
+import itertools as it
+from tqdm import tqdm
 
 
 def import_data(fname: str, sheet=0):
@@ -28,6 +30,11 @@ def vote_borda(data: pd.DataFrame):
 
 def is_equal_or_null(d1, d2):
     return (d1.eq(d2) + d1.isnull() + d2.isnull()).all().all()
+
+
+def generate_votes(n_voters, n_options, start=1):
+    options = range(start, n_options+start)
+    return it.combinations_with_replacement(it.permutations(options), n_voters)
 
 
 def vote_runoff(data: pd.DataFrame, n_rounds=2, verbose=False):
@@ -62,4 +69,13 @@ if __name__ == '__main__':
     dd = d[:2]
     dd2 = dd.fillna(0)
     print(dd, '\n', dd2, '\n', is_equal_or_null(dd, dd2))
+
+    votes = generate_votes(*d.shape)
+
+    for vote in tqdm(votes):
+        vote_df = pd.DataFrame(vote, index=d.index, columns=d.columns)
+        if not is_equal_or_null(d, vote_df):
+            continue
+
+        print(vote_df)
 
