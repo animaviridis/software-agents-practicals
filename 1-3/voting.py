@@ -49,7 +49,7 @@ def generate_votes(data: pd.DataFrame, start=1):
 
 
 def vote_runoff(data: pd.DataFrame, n_rounds=2, verbose=False):
-
+    # TODO: correct
     def rec(names=None, n_rounds_=2):
         names = names if names is not None else data.columns
         if n_rounds_ < 1:

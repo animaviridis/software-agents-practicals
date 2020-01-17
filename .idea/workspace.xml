@@ -52,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/1-3/voting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+            <state relative-caret-position="119">
+              <caret line="55" column="48" lean-forward="true" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -227,7 +227,7 @@
       <option name="presentableId" value="Default" />
       <updated>1578925153703</updated>
       <workItem from="1578925155141" duration="13464000" />
-      <workItem from="1579183823152" duration="17690000" />
+      <workItem from="1579183823152" duration="20206000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore added">
       <created>1578997806632</created>
@@ -327,11 +327,18 @@
       <option name="project" value="LOCAL" />
       <updated>1579263737237</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="[1-3] example - generating fill with a condition">
+      <created>1579268499274</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1579268499274</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31154000" />
+    <option name="totallyTimeSpent" value="33670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -340,6 +347,7 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21073826" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295129" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -416,7 +424,8 @@
     <MESSAGE value="[1-3] generating votes" />
     <MESSAGE value="[1-3] generating votes using the template (improved efficiency)" />
     <MESSAGE value="[1-3] runoff vote: bug fix + improved loop" />
-    <option name="LAST_COMMIT_MESSAGE" value="[1-3] runoff vote: bug fix + improved loop" />
+    <MESSAGE value="[1-3] example - generating fill with a condition" />
+    <option name="LAST_COMMIT_MESSAGE" value="[1-3] example - generating fill with a condition" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/1-1/valueof.asl">
@@ -522,8 +531,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/1-3/voting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+        <state relative-caret-position="119">
+          <caret line="55" column="48" lean-forward="true" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
