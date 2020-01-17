@@ -1,7 +1,7 @@
 import pandas as pd
 import argparse
 import itertools as it
-from tqdm import tqdm
+import numpy as np
 
 
 def import_data(fname: str, sheet=0):
@@ -28,13 +28,24 @@ def vote_borda(data: pd.DataFrame):
     return data.sum()
 
 
-def is_equal_or_null(d1, d2):
-    return (d1.eq(d2) + d1.isnull() + d2.isnull()).all().all()
+def unfold_tuple(t):
+    return tuple(el for subt in t for el in subt)
 
 
-def generate_votes(n_voters, n_options, start=1):
-    options = range(start, n_options+start)
-    return it.combinations_with_replacement(it.permutations(options), n_voters)
+def generate_votes(data: pd.DataFrame, start=1):
+    all_options = set(range(start, start+data.shape[1]))
+    missing = [all_options.difference(set(i)) for i in data.values]
+    missing_generator = it.product(*tuple(tuple(it.permutations(i)) for i in missing))
+
+    missing_loc = np.where(data.isna())
+    template_arr = np.array(data)
+
+    def gen():
+        for fill in missing_generator:
+            template_arr[missing_loc] = unfold_tuple(fill)
+            yield pd.DataFrame(template_arr, index=d.index, columns=d.columns)
+
+    return gen()
 
 
 def vote_runoff(data: pd.DataFrame, n_rounds=2, verbose=False):
@@ -65,17 +76,5 @@ if __name__ == '__main__':
     print(f"\nRunoff vote (2 rounds):\n{vote_runoff(d)}")
     print(f"\nRunoff vote (3 rounds):\n{vote_runoff(d, 3)}")
 
-    print(f"\n{20*'-'}\nComparing matrices")
-    dd = d[:2]
-    dd2 = dd.fillna(0)
-    print(dd, '\n', dd2, '\n', is_equal_or_null(dd, dd2))
-
-    votes = generate_votes(*d.shape)
-
-    for vote in tqdm(votes):
-        vote_df = pd.DataFrame(vote, index=d.index, columns=d.columns)
-        if not is_equal_or_null(d, vote_df):
-            continue
-
-        print(vote_df)
+    print(next(generate_votes(d)))
 
