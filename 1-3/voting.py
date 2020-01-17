@@ -20,7 +20,7 @@ def sort_scores(func):
 @sort_scores
 def vote_plurality(data: pd.DataFrame):
     m = data.max().max()
-    return (d == m).sum()
+    return (data == m).sum()
 
 
 @sort_scores
@@ -49,19 +49,24 @@ def generate_votes(data: pd.DataFrame, start=1):
 
 
 def vote_runoff(data: pd.DataFrame, n_rounds=2, verbose=False):
-    if n_rounds < 1:
-        raise ValueError("Number of rounds must be a positive integer")
 
-    all_scores = vote_plurality(data)
-    best_scores = all_scores[:n_rounds]
+    def rec(names=None, n_rounds_=2):
+        names = names if names is not None else data.columns
+        if n_rounds_ < 1:
+            raise ValueError("Number of rounds must be a positive integer")
 
-    if verbose:
-        print(f"---Rounds left: {n_rounds}, scores:\n{all_scores}")
+        all_scores = vote_plurality(data[names])
+        best_scores = all_scores[:n_rounds_]
 
-    if n_rounds < 2:
-        return best_scores
-    else:
-        return vote_runoff(data[best_scores.index], n_rounds=n_rounds-1, verbose=verbose)
+        if verbose:
+            print(f"---Rounds left: {n_rounds_}, scores:\n{all_scores}")
+
+        if n_rounds_ < 2:
+            return best_scores
+        else:
+            return rec(best_scores.index, n_rounds_=n_rounds_-1)
+
+    return rec(None, n_rounds)
 
 
 if __name__ == '__main__':
@@ -74,7 +79,7 @@ if __name__ == '__main__':
     print(f"\nPlurality vote:\n{vote_plurality(d)}")
     print(f"\nBorda count vote:\n{vote_borda(d)}")
     print(f"\nRunoff vote (2 rounds):\n{vote_runoff(d)}")
-    print(f"\nRunoff vote (3 rounds):\n{vote_runoff(d, 3)}")
+    print(f"\nRunoff vote (3 rounds):\n{vote_runoff(d, 3, True)}")
 
     print(next(generate_votes(d)))
 
