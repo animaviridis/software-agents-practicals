@@ -81,5 +81,9 @@ if __name__ == '__main__':
     print(f"\nRunoff vote (2 rounds):\n{vote_runoff(d)}")
     print(f"\nRunoff vote (3 rounds):\n{vote_runoff(d, 3, True)}")
 
-    print(next(generate_votes(d)))
+    for vote in generate_votes(d):
+        if vote_plurality(vote).index[0] == 'Italy':
+            print("\n\nItaly winning in plurality: \n")
+            print(vote)
+            break
 
