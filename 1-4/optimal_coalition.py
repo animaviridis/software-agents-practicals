@@ -16,6 +16,20 @@ def generate_utilities(n):
     return dict(zip(range(1, n + 1), np.random.randint(1, 100, n)))
 
 
+def combinations(nums: list, n_left):
+    if n_left < 2:
+        return [[num] for num in nums]
+
+    c = []
+    for i in range(len(nums)-n_left + 1):
+        head = [nums[i]]
+        tail = nums[i+1:]
+        print(head, tail)
+        c += [head + ni for ni in combinations(tail, n_left-1)]
+
+    return c
+
+
 if __name__ == '__main__':
     N = 2  # number of agents
     utilities = generate_utilities(N)
