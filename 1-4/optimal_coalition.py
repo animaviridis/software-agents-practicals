@@ -30,6 +30,25 @@ def combinations(nums: list, n_left):
     return c
 
 
+def split_combinations(nums: list, n_left):
+    if n_left < 2:
+        r = []
+        for i in range(len(nums)):
+            r.append((nums[i], nums[:i]+nums[i+1:]))
+        return r
+
+    c = []
+    for i in range(len(nums)-n_left + 1):
+        head = [nums[i]]
+        tail = nums[i+1:]
+        print(head, tail)
+
+        for ni in combinations(tail, n_left-1):
+            c.append((head + ni[0], ni[1]))
+
+    return c
+
+
 if __name__ == '__main__':
     N = 2  # number of agents
     utilities = generate_utilities(N)

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb7ba7b8-62ea-4712-b276-a101e982bc3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1-4/optimal_coalition.py" beforeDir="false" afterPath="$PROJECT_DIR$/1-4/optimal_coalition.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,8 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/1-4/optimal_coalition.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+            <state relative-caret-position="123">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
@@ -166,9 +165,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="20" />
-    <option name="y" value="136" />
+    <option name="y" value="135" />
     <option name="width" value="595" />
-    <option name="height" value="579" />
+    <option name="height" value="580" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -238,7 +237,7 @@
       <option name="presentableId" value="Default" />
       <updated>1578925153703</updated>
       <workItem from="1578925155141" duration="13464000" />
-      <workItem from="1579183823152" duration="23518000" />
+      <workItem from="1579183823152" duration="24733000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore added">
       <created>1578997806632</created>
@@ -359,15 +358,21 @@
       <option name="project" value="LOCAL" />
       <updated>1579272414034</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="[1-4] optimal coalitions: combinations">
+      <created>1579275228020</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1579275228020</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36982000" />
+    <option name="totallyTimeSpent" value="38197000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21073826" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -452,7 +457,8 @@
     <MESSAGE value="[1-3] example - generating fill with a condition" />
     <MESSAGE value="[1-3] note" />
     <MESSAGE value="[1-4] optimal coalitions: generating random utilities" />
-    <option name="LAST_COMMIT_MESSAGE" value="[1-4] optimal coalitions: generating random utilities" />
+    <MESSAGE value="[1-4] optimal coalitions: combinations" />
+    <option name="LAST_COMMIT_MESSAGE" value="[1-4] optimal coalitions: combinations" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/1-1/valueof.asl">
@@ -568,8 +574,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/1-4/optimal_coalition.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+        <state relative-caret-position="123">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
