@@ -36,17 +36,12 @@ if __name__ == '__main__':
 
     print(v)
 
-    shap = dict()
-    for i in ag:
-        shap[i] = 0
+    shap = {i: 0 for i in ag}
 
-        for co in v.keys():
-            if i not in co:
-                continue
-
-            shap[i] += v[co] - v[tuple(set(co) - {i})]
-
-        shap[i] /= FN
+    for p in it.permutations(ag):
+        tail = p[:]
+        while len(tail) > 0:
+            shap[tail[0]] += (v[tuple(set(tail))] - v[tuple(set(tail[1:]))]) / FN
+            tail = tail[1:]
 
     print(f"\nShapley values: {shap}")
-
