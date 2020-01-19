@@ -14,15 +14,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/1-1/hello.asl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1-1/grid_test.asl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
@@ -55,8 +46,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/1-4/shapley.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="46" column="44" lean-forward="true" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+            <state relative-caret-position="242">
+              <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+              <folding>
+                <element signature="e#33#55#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -240,7 +234,7 @@
       <updated>1578925153703</updated>
       <workItem from="1578925155141" duration="13464000" />
       <workItem from="1579183823152" duration="24733000" />
-      <workItem from="1579467837021" duration="1418000" />
+      <workItem from="1579467837021" duration="3498000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore added">
       <created>1578997806632</created>
@@ -389,14 +383,36 @@
       <option name="project" value="LOCAL" />
       <updated>1579468590178</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="[1-4] shapley values">
+      <created>1579469452595</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1579469452595</updated>
+    </task>
+    <task id="LOCAL-00023" summary="[1-4] shapley values">
+      <created>1579469503641</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1579469503641</updated>
+    </task>
+    <task id="LOCAL-00024" summary="[1-4] shapley values corrected">
+      <created>1579471111678</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1579471111678</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39615000" />
+    <option name="totallyTimeSpent" value="41695000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21342282" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -485,7 +501,9 @@
     <MESSAGE value="[1-4] optimal coalitions: combinations splittng (tbc.)" />
     <MESSAGE value="[1-4] shapley: all possible coalitions" />
     <MESSAGE value="[1-4] shapley: all possible permutations" />
-    <option name="LAST_COMMIT_MESSAGE" value="[1-4] shapley: all possible permutations" />
+    <MESSAGE value="[1-4] shapley values" />
+    <MESSAGE value="[1-4] shapley values corrected" />
+    <option name="LAST_COMMIT_MESSAGE" value="[1-4] shapley values corrected" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/1-1/valueof.asl">
@@ -604,10 +622,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/1-4/shapley.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="46" column="44" lean-forward="true" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+        <state relative-caret-position="242">
+          <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+          <folding>
+            <element signature="e#33#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

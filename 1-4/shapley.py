@@ -3,6 +3,7 @@
 import itertools as it
 from math import factorial
 
+
 def validate(message, t=float):
     val = 0
 
@@ -21,27 +22,37 @@ def validate(message, t=float):
     return val
 
 
+def ask_utilities(agents):
+    ut = {(): 0}
+
+    for i in agents:
+        for co in it.combinations(ag, i):
+            ut[co] = validate(f"Enter value for coalition {co}: ")
+
+    return ut
+
+
+def compute_shapley(ut):
+    shap = {i: 0 for i in ag}
+
+    for p in it.permutations(ag):
+        tail = p[:]
+        while len(tail) > 0:
+            shap[tail[0]] += (ut[tuple(set(tail))] - ut[tuple(set(tail[1:]))]) / FN
+            tail = tail[1:]
+
+    return shap
+
+
 if __name__ == '__main__':
     N = validate("Enter number of agents: ", int)
 
     FN = factorial(N)
 
     ag = range(1, N+1)
-
-    v = {(): 0}
-
-    for i in ag:
-        for co in it.combinations(ag, i):
-            v[co] = validate(f"Enter value for coalition {co}: ")
-
+    v = ask_utilities(ag)
     print(v)
 
-    shap = {i: 0 for i in ag}
-
-    for p in it.permutations(ag):
-        tail = p[:]
-        while len(tail) > 0:
-            shap[tail[0]] += (v[tuple(set(tail))] - v[tuple(set(tail[1:]))]) / FN
-            tail = tail[1:]
+    shap = compute_shapley(v)
 
     print(f"\nShapley values: {shap}")
