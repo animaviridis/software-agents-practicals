@@ -42,7 +42,20 @@ def record_bid():
     return b
 
 
+def get_valuation(goods, val_dict):
+    goods_set = set(goods)
+
+    max_val = 0
+    for key, value in val_dict.items():
+        if set(key).issubset(goods_set):
+            if value > max_val:
+                max_val = value
+
+    return max_val
+
+
 if __name__ == '__main__':
 
-    print(f"Your XOR bid: {record_bid()}")
+    br = record_bid()
+    print(f"Your XOR bid: {br}")
 
