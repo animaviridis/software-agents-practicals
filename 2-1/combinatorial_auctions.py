@@ -3,29 +3,30 @@ auctions. As input, your mechanism should take XOR-bids from a set of agents, an
 then output an allocation as well as the social welfare obtained."""
 
 
+import re
+
+
+BID_PATTERN = r'(\w*\s*,\s*)*\w+\s*:\s*\d+'
+
+
 def parse_bid(bid):
     bid_dict = dict()
     sub_bids = bid.lower().split(' xor ')
 
     if 'xor' in bid.lower() and len(sub_bids) < 2:
-        print("Invalid bid format: sub-bids should be separated with ' xor ' (with spaces around)")
+        print("Invalid entry: sub-bids should be separated with ' xor ' (with spaces around)")
         return
 
     for sub_bid in sub_bids:
-        if ':' not in sub_bid:
-            print("Invalid bid format: sub-bids should have the format: <good1, good2, ...> : <value>")
+        if re.match(BID_PATTERN, sub_bid) is None:
+            print(f"Invalid entry: sub-bids should have the format: <good1, good2, ...> : <value> (got '{sub_bid}')")
             return
 
         goods, value = sub_bid.replace(' ', '').split(':')
-
-        try:
-            value_num = float(value)
-        except ValueError:
-            print(f"Invalid sub-bid value: {value}")
-            return
+        value_num = float(value)
 
         if not goods and value_num > 0:
-            print(f"An empty sub-bid should be associated with the value of 0 (got {value_num})")
+            print(f"Invalid entry: an empty sub-bid should be associated with the value of 0 (got {value_num})")
             return
 
         bid_dict[tuple(goods.split(','))] = value_num
