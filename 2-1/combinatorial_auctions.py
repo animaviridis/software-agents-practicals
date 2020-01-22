@@ -64,14 +64,17 @@ def record_bid(agent=None):
     return b
 
 
-if __name__ == '__main__':
-    N = misc.validate("Enter the number of agents: ", int)
+def collect_data():
+    n = misc.validate("Enter the number of agents: ", int)
 
     agents = []
-    for i in range(N):
+    for i in range(n):
         agents.append(record_bid(str(i)))
-    print(agents)
 
+    return agents
+
+
+def allocate(agents):
     all_items = set()
     for agent in agents:
         for key in agent.keys():
@@ -82,7 +85,7 @@ if __name__ == '__main__':
 
     all_items = np.array(sorted(all_items))
 
-    rn = range(N)
+    rn = range(len(agents))
     best_alloc = ()
     best_social_welfare = 0
 
@@ -102,4 +105,16 @@ if __name__ == '__main__':
             best_social_welfare = social_welfare
             best_alloc = alloc
 
-    print(f"\n{20*'-'}\nBest allocation: {best_alloc} (social welfare: {best_social_welfare})\n")
+    return best_alloc, best_social_welfare
+
+
+def main():
+    all_agents = collect_data()
+    print(all_agents)
+
+    allocation, score = allocate(all_agents)
+    print(f"\n{20 * '-'}\nBest allocation: {allocation} (social welfare: {score})\n")
+
+
+if __name__ == '__main__':
+    main()
