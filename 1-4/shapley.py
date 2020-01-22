@@ -3,23 +3,7 @@
 import itertools as it
 from math import factorial
 
-
-def validate(message, t=float):
-    val = 0
-
-    while True:
-        val_str = input(message)
-        if not val_str:
-            continue
-
-        try:
-            val = t(val_str)
-        except ValueError:
-            print(f'Invalid input: {val} for conversion to {t}')
-        else:
-            break
-
-    return val
+from misc import misc
 
 
 def ask_utilities(agents):
@@ -27,7 +11,7 @@ def ask_utilities(agents):
 
     for i in agents:
         for co in it.combinations(ag, i):
-            ut[co] = validate(f"Enter value for coalition {co}: ")
+            ut[co] = misc.validate(f"Enter value for coalition {co}: ")
 
     return ut
 
@@ -45,7 +29,7 @@ def compute_shapley(ut):
 
 
 if __name__ == '__main__':
-    N = validate("Enter number of agents: ", int)
+    N = misc.validate("Enter number of agents: ", int)
 
     FN = factorial(N)
 

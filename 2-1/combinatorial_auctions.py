@@ -6,6 +6,8 @@ then output an allocation as well as the social welfare obtained."""
 import re
 from collections.abc import Iterable
 
+from misc import misc
+
 BID_PATTERN = r'(\w*\s*,\s*)*\w+\s*:\s*\d+'
 
 
@@ -36,7 +38,7 @@ def parse_bid(bid):
         return
 
     for sub_bid in sub_bids:
-        if re.match(BID_PATTERN, sub_bid) is None:
+        if re.fullmatch(BID_PATTERN, sub_bid) is None:
             print(f"Invalid entry: sub-bids should have the format: <good1, good2, ...> : <value> (got '{sub_bid}')")
             return
 
@@ -52,16 +54,19 @@ def parse_bid(bid):
     return bid_dict
 
 
-def record_bid():
+def record_bid(agent=None):
     b = None
     while b is None:
-        b = parse_bid(input("Enter a (XOR) bid: "))
+        b = parse_bid(input(f"Enter a (XOR) bid for agent{' ' + agent if agent else ''}: "))
 
     return b
 
 
 if __name__ == '__main__':
+    N = misc.validate("Enter the number of agents: ", int)
 
-    br = record_bid()
-    print(f"Your XOR bid: {br}")
+    agents = []
+    for i in range(N):
+        agents.append(record_bid(str(i)))
+    print(agents)
 
