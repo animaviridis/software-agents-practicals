@@ -4,13 +4,31 @@ then output an allocation as well as the social welfare obtained."""
 
 
 import re
-
+from collections.abc import Iterable
 
 BID_PATTERN = r'(\w*\s*,\s*)*\w+\s*:\s*\d+'
 
 
+class BidDict(dict):
+    def _get_valuation(self, goods):
+        if not isinstance(goods, Iterable):
+            goods = (goods,)
+        goods_set = set(goods)
+
+        max_val = 0
+        for key, value in self.items():
+            if set(key).issubset(goods_set):
+                if value > max_val:
+                    max_val = value
+
+        return max_val
+
+    def __getitem__(self, item):
+        return self._get_valuation(item)
+
+
 def parse_bid(bid):
-    bid_dict = dict()
+    bid_dict = BidDict()
     sub_bids = bid.lower().split(' xor ')
 
     if 'xor' in bid.lower() and len(sub_bids) < 2:
@@ -40,18 +58,6 @@ def record_bid():
         b = parse_bid(input("Enter a (XOR) bid: "))
 
     return b
-
-
-def get_valuation(goods, val_dict):
-    goods_set = set(goods)
-
-    max_val = 0
-    for key, value in val_dict.items():
-        if set(key).issubset(goods_set):
-            if value > max_val:
-                max_val = value
-
-    return max_val
 
 
 if __name__ == '__main__':

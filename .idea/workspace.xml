@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb7ba7b8-62ea-4712-b276-a101e982bc3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2-1/combinatorial_auctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/2-1/combinatorial_auctions.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/2-1/combinatorial_auctions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+            <state relative-caret-position="221">
+              <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -240,7 +239,7 @@
       <workItem from="1578925155141" duration="13464000" />
       <workItem from="1579183823152" duration="24733000" />
       <workItem from="1579467837021" duration="3498000" />
-      <workItem from="1579513659448" duration="13506000" />
+      <workItem from="1579513659448" duration="14307000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore added">
       <created>1578997806632</created>
@@ -424,11 +423,25 @@
       <option name="project" value="LOCAL" />
       <updated>1579730767724</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="[2-1] XOR bids with regular expressions">
+      <created>1579732097960</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1579732097960</updated>
+    </task>
+    <task id="LOCAL-00028" summary="[2-1] getting valuation for an allocation">
+      <created>1579732649912</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1579732649912</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55201000" />
+    <option name="totallyTimeSpent" value="56002000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -525,7 +538,9 @@
     <MESSAGE value="[1-4] shapley values corrected" />
     <MESSAGE value="[1-4] shapley values for marginal contribution nets" />
     <MESSAGE value="[2-1] combinatorial auctions: XOR bids handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="[2-1] combinatorial auctions: XOR bids handling" />
+    <MESSAGE value="[2-1] XOR bids with regular expressions" />
+    <MESSAGE value="[2-1] getting valuation for an allocation" />
+    <option name="LAST_COMMIT_MESSAGE" value="[2-1] getting valuation for an allocation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/1-1/valueof.asl">
@@ -689,8 +704,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2-1/combinatorial_auctions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        <state relative-caret-position="221">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
         </state>
       </provider>
     </entry>
