@@ -4,6 +4,8 @@ then output an allocation as well as the social welfare obtained."""
 
 
 import re
+import itertools as it
+import numpy as np
 from collections.abc import Iterable
 
 from misc import misc
@@ -76,4 +78,28 @@ if __name__ == '__main__':
             for item in key:
                 all_items.add(item)
 
-    print(f"Items to be distributed: {all_items}")
+    print(f"\nItems to be distributed: {all_items}")
+
+    all_items = np.array(sorted(all_items))
+
+    rn = range(N)
+    best_alloc = ()
+    best_social_welfare = 0
+
+    for alloc in it.combinations_with_replacement(rn, len(all_items)):
+        alloc_arr = np.array(alloc)
+        print(f"\nAllocation: {dict(zip(all_items, alloc_arr))}")
+        social_welfare = 0
+
+        for agent_n in rn:
+            items_n = all_items[np.where(alloc_arr == agent_n)]
+            value_n = agents[agent_n][items_n]
+            print(f"Agent {agent_n}: {items_n} = {value_n}")
+            social_welfare += value_n
+        print(f"Social welfare: {social_welfare}")
+
+        if social_welfare > best_social_welfare:
+            best_social_welfare = social_welfare
+            best_alloc = alloc
+
+    print(f"\n{20*'-'}\nBest allocation: {best_alloc} (social welfare: {best_social_welfare})\n")
