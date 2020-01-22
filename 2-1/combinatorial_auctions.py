@@ -70,3 +70,10 @@ if __name__ == '__main__':
         agents.append(record_bid(str(i)))
     print(agents)
 
+    all_items = set()
+    for agent in agents:
+        for key in agent.keys():
+            for item in key:
+                all_items.add(item)
+
+    print(f"Items to be distributed: {all_items}")
