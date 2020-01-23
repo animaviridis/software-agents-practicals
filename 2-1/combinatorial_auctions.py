@@ -94,6 +94,22 @@ def extract_items(agents):
     return sorted(all_items)
 
 
+def compute_social_welfare(agents, verbose=False):
+    def wrapper(alloc_dict):
+        social_welfare = 0
+
+        for i, (agent, items) in enumerate(alloc_dict.items()):
+            val = agents[i][items]
+            social_welfare += val
+
+            if verbose:
+                print(f"Agent {i}: {items} = {val}")
+
+        return social_welfare
+
+    return wrapper
+
+
 def allocate(agents, verbose=True):
     def vprint(*args):
         if verbose:
@@ -107,20 +123,20 @@ def allocate(agents, verbose=True):
     best_alloc = ()
     best_social_welfare = 0
 
+    eval_alloc = compute_social_welfare(agents, verbose=verbose)
+
     for alloc_c in it.combinations_with_replacement(rn, len(all_items)):
         for alloc in set(it.permutations(alloc_c)):
             alloc_arr = np.array(alloc)
             vprint(f"\nAllocation: {dict(zip(all_items, alloc_arr))}")
 
-            social_welfare = 0
             alloc_by_agent = dict()
 
             for i, agent in enumerate(agents):
                 items_i = all_items[np.where(alloc_arr == i)]
                 alloc_by_agent[i] = sorted(items_i)
-                value_i = agent[items_i]
-                vprint(f"Agent {i}: {items_i} = {value_i}")
-                social_welfare += value_i
+
+            social_welfare = eval_alloc(alloc_by_agent)
             vprint(f"Social welfare: {social_welfare}")
 
             if social_welfare > best_social_welfare:
