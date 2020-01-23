@@ -84,16 +84,20 @@ def collect_data():
     return agents
 
 
-def allocate(agents):
+def extract_items(agents):
     all_items = set()
     for agent in agents:
         for key in agent.keys():
             for item in key:
                 all_items.add(item)
 
-    print(f"\nItems to be distributed: {all_items}")
+    return sorted(all_items)
 
-    all_items = np.array(sorted(all_items))
+
+def allocate(agents):
+    all_items = extract_items(agents)
+    print(f"\nItems to be distributed: {all_items}")
+    all_items = np.array(all_items)
 
     rn = range(len(agents))
     best_alloc = ()
@@ -107,12 +111,12 @@ def allocate(agents):
             social_welfare = 0
             alloc_by_agent = dict()
 
-            for agent_n in rn:
-                items_n = all_items[np.where(alloc_arr == agent_n)]
-                alloc_by_agent[agent_n] = set(items_n)
-                value_n = agents[agent_n][items_n]
-                print(f"Agent {agent_n}: {items_n} = {value_n}")
-                social_welfare += value_n
+            for i, agent in enumerate(agents):
+                items_i = all_items[np.where(alloc_arr == i)]
+                alloc_by_agent[i] = set(items_i)
+                value_i = agent[items_i]
+                print(f"Agent {i}: {items_i} = {value_i}")
+                social_welfare += value_i
             print(f"Social welfare: {social_welfare}")
 
             if social_welfare > best_social_welfare:
