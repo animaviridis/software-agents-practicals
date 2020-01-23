@@ -95,10 +95,13 @@ def extract_items(agents):
 
 
 def compute_social_welfare(agents, verbose=False):
-    def wrapper(alloc_dict):
+    def wrapper(alloc_dict, skip=None):
         social_welfare = 0
 
         for i, (agent, items) in enumerate(alloc_dict.items()):
+            if i == skip:  # for computing value without an agent(Vickery/Clarke/Groves Mechanism)
+                continue
+
             val = agents[i][items]
             social_welfare += val
 
@@ -168,6 +171,13 @@ def main():
 
     dummy_welfares = allocate_dummies(all_agents, verbose=False)
     print(f"Welfares with agents replaced with dummies (indifferent to all outcomes): {dummy_welfares}")
+
+    compute_welfares = compute_social_welfare(all_agents, verbose=False)
+    skipping_welfares = [compute_welfares(allocation, skip=i) for i in range(len(all_agents))]
+    print(f"Welfares with skipping an agent: {skipping_welfares}")
+
+    payments = {i: dummy_welfares[i] - skipping_welfares[i] for i in range(len(all_agents))}
+    print(f"\nHow much agents should pay: {payments}")
 
 
 if __name__ == '__main__':
