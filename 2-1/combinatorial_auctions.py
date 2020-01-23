@@ -91,7 +91,8 @@ def allocate(agents):
 
     for alloc in it.combinations_with_replacement(rn, len(all_items)):
         alloc_arr = np.array(alloc)
-        print(f"\nAllocation: {dict(zip(all_items, alloc_arr))}")
+        alloc_dict = dict(zip(all_items, alloc_arr))
+        print(f"\nAllocation: {alloc_dict}")
         social_welfare = 0
 
         for agent_n in rn:
@@ -103,7 +104,7 @@ def allocate(agents):
 
         if social_welfare > best_social_welfare:
             best_social_welfare = social_welfare
-            best_alloc = alloc
+            best_alloc = alloc_dict
 
     return best_alloc, best_social_welfare
 
