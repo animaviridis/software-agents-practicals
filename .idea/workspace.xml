@@ -55,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/2-1/combinatorial_auctions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="112" column="21" lean-forward="true" selection-start-line="112" selection-start-column="21" selection-end-line="112" selection-end-column="21" />
+            <state relative-caret-position="208">
+              <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
               <folding>
                 <element signature="e#248#257#0" expanded="true" />
               </folding>
@@ -258,7 +258,7 @@
       <workItem from="1578925155141" duration="13464000" />
       <workItem from="1579183823152" duration="24733000" />
       <workItem from="1579467837021" duration="3498000" />
-      <workItem from="1579513659448" duration="18320000" />
+      <workItem from="1579513659448" duration="18661000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore added">
       <created>1578997806632</created>
@@ -484,11 +484,25 @@
       <option name="project" value="LOCAL" />
       <updated>1579737154155</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="[2-1] brute-force allocation - refactoring">
+      <created>1579737505054</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1579737505054</updated>
+    </task>
+    <task id="LOCAL-00034" summary="[2-1] brute-force allocation - minor changes">
+      <created>1579737679082</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1579737679082</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60015000" />
+    <option name="totallyTimeSpent" value="60356000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -586,8 +600,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[1-3] plurality vote" />
-    <MESSAGE value="[1-3] borda count vote + decorator for sorting result" />
     <MESSAGE value="[1-3] runoff vote for 2 rounds" />
     <MESSAGE value="[1-3] runoff vote for n rounds (to be checked)" />
     <MESSAGE value="[1-3] comparing matrices with NaNs" />
@@ -611,7 +623,9 @@
     <MESSAGE value="[2-1] bug fix + multiple agents" />
     <MESSAGE value="[2-1] all items to be distributed" />
     <MESSAGE value="[2-1] brute-force allocation" />
-    <option name="LAST_COMMIT_MESSAGE" value="[2-1] brute-force allocation" />
+    <MESSAGE value="[2-1] brute-force allocation - refactoring" />
+    <MESSAGE value="[2-1] brute-force allocation - minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="[2-1] brute-force allocation - minor changes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/1-1/valueof.asl">
@@ -782,8 +796,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2-1/combinatorial_auctions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="112" column="21" lean-forward="true" selection-start-line="112" selection-start-column="21" selection-end-line="112" selection-end-column="21" />
+        <state relative-caret-position="208">
+          <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
           <folding>
             <element signature="e#248#257#0" expanded="true" />
           </folding>
