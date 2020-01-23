@@ -89,24 +89,25 @@ def allocate(agents):
     best_alloc = ()
     best_social_welfare = 0
 
-    for alloc in it.combinations_with_replacement(rn, len(all_items)):
-        alloc_arr = np.array(alloc)
-        print(f"\nAllocation: {dict(zip(all_items, alloc_arr))}")
+    for alloc_c in it.combinations_with_replacement(rn, len(all_items)):
+        for alloc in set(it.permutations(alloc_c)):
+            alloc_arr = np.array(alloc)
+            print(f"\nAllocation: {dict(zip(all_items, alloc_arr))}")
 
-        social_welfare = 0
-        alloc_by_agent = dict()
+            social_welfare = 0
+            alloc_by_agent = dict()
 
-        for agent_n in rn:
-            items_n = all_items[np.where(alloc_arr == agent_n)]
-            alloc_by_agent[agent_n] = items_n
-            value_n = agents[agent_n][items_n]
-            print(f"Agent {agent_n}: {items_n} = {value_n}")
-            social_welfare += value_n
-        print(f"Social welfare: {social_welfare}")
+            for agent_n in rn:
+                items_n = all_items[np.where(alloc_arr == agent_n)]
+                alloc_by_agent[agent_n] = items_n
+                value_n = agents[agent_n][items_n]
+                print(f"Agent {agent_n}: {items_n} = {value_n}")
+                social_welfare += value_n
+            print(f"Social welfare: {social_welfare}")
 
-        if social_welfare > best_social_welfare:
-            best_social_welfare = social_welfare
-            best_alloc = alloc_by_agent
+            if social_welfare > best_social_welfare:
+                best_social_welfare = social_welfare
+                best_alloc = alloc_by_agent
 
     return best_alloc, best_social_welfare
 
