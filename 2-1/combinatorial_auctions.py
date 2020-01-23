@@ -1,6 +1,16 @@
 """Create a brute-force winner determination mechanism for XOR-bids based combinatorial
 auctions. As input, your mechanism should take XOR-bids from a set of agents, and should
-then output an allocation as well as the social welfare obtained."""
+then output an allocation as well as the social welfare obtained.
+
+Example:
+3 agents with bids:
+- a: 3 xor a, b: 100 xor c: 4
+- a, b: 2 xor d: 20
+- c: 20 xor a, d: 21
+
+-> Result:
+Best allocation: {0: {'b', 'a'}, 1: {'d'}, 2: {'c'}} (social welfare: 140.0)
+"""
 
 
 import re
@@ -99,7 +109,7 @@ def allocate(agents):
 
             for agent_n in rn:
                 items_n = all_items[np.where(alloc_arr == agent_n)]
-                alloc_by_agent[agent_n] = items_n
+                alloc_by_agent[agent_n] = set(items_n)
                 value_n = agents[agent_n][items_n]
                 print(f"Agent {agent_n}: {items_n} = {value_n}")
                 social_welfare += value_n
