@@ -130,12 +130,28 @@ def allocate(agents, verbose=True):
     return best_alloc, best_social_welfare
 
 
+def allocate_dummies(agents, **kwargs):
+
+    dummy_agent = BidDict()
+
+    welfare_with_dummies = []
+
+    for i in range(len(agents)):
+        agd = agents[:i] + [dummy_agent] + agents[i+1:]
+        welfare_with_dummies.append(allocate(agd, **kwargs)[1])
+
+    return welfare_with_dummies
+
+
 def main():
     all_agents = collect_data()
     print(all_agents)
 
     allocation, score = allocate(all_agents, verbose=False)
     print(f"\n{20 * '-'}\nBest allocation: {allocation} (social welfare: {score})\n")
+
+    dummy_welfares = allocate_dummies(all_agents, verbose=False)
+    print(f"Welfares with agents replaced with dummies (indifferent to all outcomes): {dummy_welfares}")
 
 
 if __name__ == '__main__':
