@@ -162,6 +162,20 @@ def allocate_dummies(agents, **kwargs):
     return welfare_with_dummies
 
 
+def calculate_payments(agents, allocation, verbose=False):
+    dummy_welfares = allocate_dummies(agents, verbose=verbose)
+    print(f"Welfares with agents replaced with dummies (indifferent to all outcomes): {dummy_welfares}")
+
+    rn = range(len(agents))
+
+    compute_welfares = compute_social_welfare(agents, verbose=verbose)
+
+    skipping_welfares = [compute_welfares(allocation, skip=i) for i in rn]
+    print(f"Welfares with skipping an agent: {skipping_welfares}")
+
+    return {i: dummy_welfares[i] - skipping_welfares[i] for i in rn}
+
+
 def main():
     all_agents = collect_data()
     print(all_agents)
@@ -169,14 +183,7 @@ def main():
     allocation, score = allocate(all_agents, verbose=False)
     print(f"\n{20 * '-'}\nBest allocation: {allocation} (social welfare: {score})\n")
 
-    dummy_welfares = allocate_dummies(all_agents, verbose=False)
-    print(f"Welfares with agents replaced with dummies (indifferent to all outcomes): {dummy_welfares}")
-
-    compute_welfares = compute_social_welfare(all_agents, verbose=False)
-    skipping_welfares = [compute_welfares(allocation, skip=i) for i in range(len(all_agents))]
-    print(f"Welfares with skipping an agent: {skipping_welfares}")
-
-    payments = {i: dummy_welfares[i] - skipping_welfares[i] for i in range(len(all_agents))}
+    payments = calculate_payments(all_agents, allocation, verbose=False)
     print(f"\nHow much agents should pay: {payments}")
 
 
