@@ -7,6 +7,9 @@ class Agent:
         self.neighbours = set()
         self.score = [0, 0]
 
+    def __str__(self):
+        return f"Agent: competence={self.competence}, score={self.score}"
+
     def do_task(self):
         return random.random() < self.competence
 
