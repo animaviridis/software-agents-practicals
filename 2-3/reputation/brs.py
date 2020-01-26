@@ -23,11 +23,17 @@ def brs_rating(a, b):
 
 class BRSOpinion(tuple):
     def __new__(cls, r, s, *args, **kwargs):
-        return super().__new__(tuple, BRSOpinion.calculate_opinion(r, s))
+        return super().__new__(BRSOpinion, BRSOpinion.calculate_opinion(r, s))
 
     def __init__(self, r, s):
         self.r = r
         self.s = s
+
+    def __mul__(self, other):
+        if not isinstance(other, type(self)):
+            raise TypeError("Argument is not a BRSOpinion object")
+
+        return self.discount_belief(self, other)
 
     @staticmethod
     def calculate_opinion(r, s):
@@ -39,16 +45,16 @@ class BRSOpinion(tuple):
 
         return b, d, u
 
+    @staticmethod
+    def discount_belief(xy, yz):
+        b_xy, d_xy, u_xy = xy
+        b_yz, d_yz, u_yz = yz
 
-def discount_belief(xy, yz):
-    b_xy, d_xy, u_xy = xy
-    b_yz, d_yz, u_yz = yz
+        b = b_xy * b_yz
+        d = b_xy * d_yz
+        u = d_xy + u_xy + b_xy * u_yz
 
-    b = b_xy * b_yz
-    d = b_xy * d_yz
-    u = d_xy + u_xy + b_xy * u_yz
-
-    return b, d, u
+        return b, d, u
 
 
 if __name__ == '__main__':
@@ -58,8 +64,9 @@ if __name__ == '__main__':
     print(brs_rating(20, 10))
     print(brs_rating(20, 10, False))
 
-    brs = BRSOpinion(10, 20)
+    brs_xy = BRSOpinion(5, 1)
+    brs_yz = BRSOpinion(4, 1)
 
-    print("\nb, d, u: ", brs)
-
-    # print('\nDiscounting beliefs:', discount_belief(brs_opinion(10, 20), brs_opinion(30, 2)))
+    print("XY b, d, u: ", brs_xy)
+    print("YZ b, d, u: ", brs_yz)
+    print("XZ b, d, u: ", brs_xy * brs_yz)
