@@ -24,8 +24,10 @@ class Agent:
 
     def get_reputation(self, target):
         """returns the reputation value for agent target according to this agent"""
-        pass
+
+        raise NotImplementedError()
 
     def pick_partner(self):
         """select a partner for interaction from the agent's neighbours"""
-        pass
+
+        raise NotImplementedError()
