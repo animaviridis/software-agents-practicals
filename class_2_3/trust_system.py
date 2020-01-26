@@ -1,11 +1,14 @@
 import random
 import networkx as nx
 import time
+import numpy as np
+import matplotlib.pyplot as plt
 
-from class_2_3.agent import Agent
+from class_2_3.agent import DummyAgent
 from class_2_3.environment import Environment
 
 
+Agent = DummyAgent
 NUM_AGENTS = 10  # Number of agents
 
 random.seed(0)  # set the random seed
@@ -20,7 +23,9 @@ env = Environment(graph)
 env.add_agents(agents)
 
 # random.seed(time.time()) # uncomment if you want different experiments on same graph
-for i in range(0, 100):  # run for 100 rounds
+n_rounds = 100
+all_scores = np.zeros((n_rounds, 2))
+for i in range(0, n_rounds):  # run for 100 rounds
     score = [0, 0]
     for a in env.nodes:
         s = a.delegate()
@@ -28,4 +33,8 @@ for i in range(0, 100):  # run for 100 rounds
             score[0] += 1
         else:
             score[1] += 1
-    print(score)
+    all_scores[i] = score
+
+fig, ax = plt.subplots()
+ax.plot(all_scores[:, 0], all_scores[:, 1], 'o', alpha=0.05, markersize=15)
+plt.show()

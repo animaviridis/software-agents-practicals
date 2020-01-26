@@ -16,7 +16,7 @@ class Environment(nx.DiGraph):
     def tick(self):
         score = [0, 0]
         for n in self.nodes:
-            if self.delegate():
+            if n.delegate():
                 score[0] += 1
             else:
                 score[1] += 1

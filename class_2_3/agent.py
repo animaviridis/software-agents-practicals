@@ -31,3 +31,12 @@ class Agent:
         """select a partner for interaction from the agent's neighbours"""
 
         raise NotImplementedError()
+
+
+class DummyAgent(Agent):
+    def get_reputation(self, target):
+        return 1
+
+    def pick_partner(self):
+        return random.choice(list(self.neighbours))
+
