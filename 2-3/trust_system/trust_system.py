@@ -1,11 +1,10 @@
 import random
 import networkx as nx
-import time
 import numpy as np
 import matplotlib.pyplot as plt
 
-from class_2_3.agent import DummyAgent
-from class_2_3.environment import Environment
+from class_2_3.trust_system.agent import DummyAgent
+from class_2_3.trust_system.environment import Environment
 
 
 Agent = DummyAgent
