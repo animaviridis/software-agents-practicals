@@ -21,15 +21,23 @@ def brs_rating(a, b):
     return (a - b) / (a + b + 2)
 
 
-@smoothing
-def brs_opinion(r, s):
-    den = r + s + 2  # denominator
+class BRSOpinion(tuple):
+    def __new__(cls, r, s, *args, **kwargs):
+        return super().__new__(tuple, BRSOpinion.calculate_opinion(r, s))
 
-    b = r / den  # belief?
-    d = s / den  # ?
-    u = 2 / den  # uncertainty?
+    def __init__(self, r, s):
+        self.r = r
+        self.s = s
 
-    return b, d, u
+    @staticmethod
+    def calculate_opinion(r, s):
+        den = r + s + 2  # denominator
+
+        b = r / den  # belief?
+        d = s / den  # ?
+        u = 2 / den  # uncertainty?
+
+        return b, d, u
 
 
 def discount_belief(xy, yz):
@@ -50,6 +58,8 @@ if __name__ == '__main__':
     print(brs_rating(20, 10))
     print(brs_rating(20, 10, False))
 
-    print("\nb, d, u: ", brs_opinion(10, 20))
+    brs = BRSOpinion(10, 20)
 
-    print('\nDiscounting beliefs:', discount_belief(brs_opinion(10, 20), brs_opinion(30, 2)))
+    print("\nb, d, u: ", brs)
+
+    # print('\nDiscounting beliefs:', discount_belief(brs_opinion(10, 20), brs_opinion(30, 2)))
