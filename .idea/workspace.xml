@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb7ba7b8-62ea-4712-b276-a101e982bc3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/class_2_3/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/class_2_3/agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class_2_3/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/class_2_3/environment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class_2_3/trust_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/class_2_3/trust_system.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2-3/reputation/brs.py" beforeDir="false" afterPath="$PROJECT_DIR$/2-3/reputation/brs.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/class_2_3/trust_system.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2-3/trust_system/trust_system.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="192">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -26,8 +25,17 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/2-3/reputation/brs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/class_2_3/agent.py">
+        <entry file="file://$PROJECT_DIR$/2-3/trust_system/agent.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="203">
               <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
@@ -41,7 +49,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/class_2_3/environment.py">
+        <entry file="file://$PROJECT_DIR$/2-3/trust_system/environment.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="223">
               <caret line="14" selection-start-line="14" selection-end-line="14" />
@@ -112,6 +120,8 @@
         <option value="$PROJECT_DIR$/class_2_3/agent.py" />
         <option value="$PROJECT_DIR$/class_2_3/environment.py" />
         <option value="$PROJECT_DIR$/class_2_3/trust_system.py" />
+        <option value="$PROJECT_DIR$/class_2_3/trust_system/trust_system.py" />
+        <option value="$PROJECT_DIR$/2-3/reputation/brs.py" />
       </list>
     </option>
   </component>
@@ -148,7 +158,19 @@
             <path>
               <item name="software-agents-practicals" type="b2602c69:ProjectViewProjectNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="class_2_3" type="462c0819:PsiDirectoryNode" />
+              <item name="2-3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="software-agents-practicals" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="2-3" type="462c0819:PsiDirectoryNode" />
+              <item name="reputation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="software-agents-practicals" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="2-3" type="462c0819:PsiDirectoryNode" />
+              <item name="trust_system" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="software-agents-practicals" type="b2602c69:ProjectViewProjectNode" />
@@ -168,12 +190,13 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\1-1\alltogether" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\class_2_3\trust_system" />
       <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\1-1\communication" />
       <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\1-1" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\1-1\alltogether" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -202,7 +225,7 @@
       <workItem from="1579183823152" duration="24733000" />
       <workItem from="1579467837021" duration="3498000" />
       <workItem from="1579513659448" duration="20060000" />
-      <workItem from="1580068421929" duration="4080000" />
+      <workItem from="1580068421929" duration="5343000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore added">
       <created>1578997806632</created>
@@ -519,11 +542,32 @@
       <option name="project" value="LOCAL" />
       <updated>1580069654389</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="[2-3] Dummy agent">
+      <created>1580072999586</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1580072999586</updated>
+    </task>
+    <task id="LOCAL-00047" summary="[2-3] Rearranged">
+      <created>1580073073165</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1580073073165</updated>
+    </task>
+    <task id="LOCAL-00048" summary="[2-3] Beta reputation system calculations">
+      <created>1580073783839</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1580073783839</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69304000" />
+    <option name="totallyTimeSpent" value="70567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -621,9 +665,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[1-3] example - generating fill with a condition" />
-    <MESSAGE value="[1-3] note" />
-    <MESSAGE value="[1-4] optimal coalitions: generating random utilities" />
     <MESSAGE value="[1-4] optimal coalitions: combinations" />
     <MESSAGE value="[1-4] optimal coalitions: combinations splittng (tbc.)" />
     <MESSAGE value="[1-4] shapley: all possible coalitions" />
@@ -646,7 +687,10 @@
     <MESSAGE value="[2-3] Code from MyAberdeen" />
     <MESSAGE value="[2-3] Code reformating" />
     <MESSAGE value="[2-3] Code reformating contd." />
-    <option name="LAST_COMMIT_MESSAGE" value="[2-3] Code reformating contd." />
+    <MESSAGE value="[2-3] Dummy agent" />
+    <MESSAGE value="[2-3] Rearranged" />
+    <MESSAGE value="[2-3] Beta reputation system calculations" />
+    <option name="LAST_COMMIT_MESSAGE" value="[2-3] Beta reputation system calculations" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/1-1/valueof.asl">
@@ -814,7 +858,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class_2_3/__init__.py">
+    <entry file="file://$PROJECT_DIR$/2-3/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/misc/__init__.py">
@@ -823,27 +867,34 @@
     <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/class_2_3/agent.py">
+    <entry file="file://$PROJECT_DIR$/2-3/trust_system/agent.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class_2_3/environment.py">
+    <entry file="file://$PROJECT_DIR$/2-3/trust_system/environment.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class_2_3/trust_system.py">
+    <entry file="file://$PROJECT_DIR$/2-3/trust_system/trust_system.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2-3/reputation/brs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
         </state>
       </provider>
     </entry>
