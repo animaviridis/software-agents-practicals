@@ -57,6 +57,9 @@ class BRSOpinion(tuple):
         return b, d, u
 
 
+# TODO: forgetting
+
+
 if __name__ == '__main__':
     print(brs_expected(10, 10))
     print(brs_rating(10, 10), '\n')
