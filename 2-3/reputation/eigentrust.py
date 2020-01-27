@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 
 def normalise_trust(local_trust):
@@ -26,6 +27,32 @@ def aggregate(trust_matrix):
     return wrapper
 
 
+def calculate_system_trust(trust_matrix_norm, lim=1e-6, init_vec='mean'):
+    if init_vec == 'mean':
+        system_trust = trust_norm.mean(axis=0)
+    elif init_vec == 'random':
+        system_trust = pd.Series(np.random.uniform(0.4, 0.6, size=3), index=trust_norm.columns)
+    elif isinstance(init_vec, int):
+        system_trust = trust_norm.iloc[init_vec]
+    else:
+        raise ValueError("init_vec should be 'mean', 'random', or an integer (column index)")
+
+    print(f"\nInitial trust:\n{system_trust}")
+
+    d = 1
+    i = 0
+
+    agg = aggregate(trust_matrix_norm)
+
+    while d >= lim:
+        system_trust, d = agg(system_trust)
+        i += 1
+
+    print(f"\nTrust aggregation - {i} rounds,  diff={d:.2E}")
+
+    return system_trust
+
+
 if __name__ == '__main__':
     f = r'2-3/reputation/local_trust.xlsx'
     print(f"Importing from {f}")
@@ -33,19 +60,7 @@ if __name__ == '__main__':
     print(trust)
 
     trust_norm = normalise_trust(trust)
-    print(trust_norm)
+    print(f"\nNormalised trust: {trust_norm}")
 
-    trust_agg = trust_norm.iloc[0]
-    print(f"\nInitial trust:\n{trust_agg}")
-
-    LIM = 1e-3
-    d = 1
-    i = 1
-
-    agg = aggregate(trust_norm)
-
-    while d >= LIM:
-        trust_agg, d = agg(trust_agg)
-        i += 1
-
-    print(f"\nTrust aggregation - {i} rounds,  diff={d:.2E}:\n{trust_agg}")
+    trust_agg = calculate_system_trust(trust_norm, init_vec='mean')
+    print(f"System trust:\n{trust_agg}")
