@@ -9,6 +9,12 @@ def normalise_trust(local_trust):
     return local_trust_norm
 
 
+def mul(trust_matrix, trust_vector):
+    trust_vector_reind = pd.Series(trust_vector.values, index=trust_matrix.index, name=trust_vector.name)
+
+    return trust_matrix.T.dot(trust_vector_reind)
+
+
 if __name__ == '__main__':
     n_agents = 3
     agents = list(range(n_agents))
@@ -20,3 +26,9 @@ if __name__ == '__main__':
     print(trust)
     trust_norm = normalise_trust(trust)
     print(trust_norm)
+
+    trust_agg = trust_norm.iloc[0]
+    print(f"\nInitial trust:\n{trust_agg}")
+
+    trust_agg = mul(trust_norm, trust_norm.iloc[0])
+    print(f"\nFirst-order trust aggregation:\n{trust_agg}")
