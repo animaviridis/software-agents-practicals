@@ -1,4 +1,3 @@
-import numpy as np
 import pandas as pd
 
 
@@ -28,14 +27,11 @@ def aggregate(trust_matrix):
 
 
 if __name__ == '__main__':
-    n_agents = 3
-    agents = list(range(n_agents))
-
-    trust = pd.DataFrame(np.random.randint(-3, 10, size=(n_agents, n_agents)),
-                         columns=[f'trustee A{i}' for i in agents],
-                         index=[f'trustor A{i}' for i in agents])
-
+    f = r'2-3/reputation/local_trust.xlsx'
+    print(f"Importing from {f}")
+    trust = pd.read_excel(f, index_col=0)
     print(trust)
+
     trust_norm = normalise_trust(trust)
     print(trust_norm)
 
@@ -50,5 +46,6 @@ if __name__ == '__main__':
 
     while d >= LIM:
         trust_agg, d = agg(trust_agg)
-        print(f"\nTrust aggregation {i} with diff {d:.2E}:\n{trust_agg}")
         i += 1
+
+    print(f"\nTrust aggregation - {i} rounds,  diff={d:.2E}:\n{trust_agg}")
