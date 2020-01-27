@@ -19,6 +19,14 @@ def diff(v1, v2):
     return (v1 - v2).abs().sum()
 
 
+def aggregate(trust_matrix):
+    def wrapper(trust_vector):
+        trust_vector_agg = mul(trust_matrix, trust_vector)
+        vd = diff(trust_vector, trust_vector_agg)
+        return trust_vector_agg, vd
+    return wrapper
+
+
 if __name__ == '__main__':
     n_agents = 3
     agents = list(range(n_agents))
@@ -34,8 +42,13 @@ if __name__ == '__main__':
     trust_agg = trust_norm.iloc[0]
     print(f"\nInitial trust:\n{trust_agg}")
 
-    for i in range(1, 10):
-        trust_agg_new = mul(trust_norm, trust_agg)
-        d = diff(trust_agg_new, trust_agg)
+    LIM = 1e-3
+    d = 1
+    i = 1
+
+    agg = aggregate(trust_norm)
+
+    while d >= LIM:
+        trust_agg, d = agg(trust_agg)
         print(f"\nTrust aggregation {i} with diff {d:.2E}:\n{trust_agg}")
-        trust_agg = trust_agg_new
+        i += 1
