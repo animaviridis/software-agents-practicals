@@ -1,0 +1,11 @@
+R1: -> wa
+R2: -> wb
+R3: -> wc
+
+R4: wa => a
+R5: wb => b
+R6: wc => c
+
+R7: a,c -> !b
+R8: a,b -> !c
+R9: b,c -> !a
