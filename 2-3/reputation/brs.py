@@ -33,7 +33,13 @@ class BRSOpinion(tuple):
         if not isinstance(other, type(self)):
             raise TypeError("Argument is not a BRSOpinion object")
 
-        return self.discount_belief(self, other)
+        # TODO: verify
+
+        den = (self.r + 2) * (other.r + other.s + 2) + 2 * self.r
+        r = 2 * self.r * other.r / den
+        s = 2 * self.s * other.s / den
+
+        return BRSOpinion(r, s)
 
     @staticmethod
     def calculate_opinion(r, s):
