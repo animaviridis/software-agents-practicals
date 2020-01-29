@@ -47,13 +47,13 @@ def evaluate(ad, abort=True):
 
 arg_dict = {a: int(a in attack_free) for a in arguments}
 
-grounded_ext = evaluate(arg_dict) or []
+grounded_ext = evaluate(arg_dict, False) or []
 print(f"\nGrounded extension: {grounded_ext}")
 
-extensions = []
+stable_ext = []
 
 
-for start_arg in attackers:
+for start_arg in [arg for arg, val in arg_dict.items() if not val and arg in attackers]:
     print(f"\nStarting from {start_arg}")
     current_ad = copy.deepcopy(arg_dict)
     current_ad[start_arg] = 1
@@ -61,6 +61,6 @@ for start_arg in attackers:
     ext = evaluate(current_ad)
     if ext:
         print(f"New extension: {ext}")
-        extensions.append(ext)
+        stable_ext.append(ext)
 
-print(f"\nExtensions: {extensions}")
+print(f"\nStable extensions: {stable_ext}")
