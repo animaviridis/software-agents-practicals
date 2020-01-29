@@ -8,13 +8,15 @@ from parser_abstract import read_file
 
 arguments, rules = read_file(sys.argv[1] if len(sys.argv) > 1 else 'aaf.aaf')  # TODO: parser
 
-attacks = defaultdict(lambda: [])
-attacked = []
-for rule in rules:
-    attacks[rule[0]].append(rule[1])
-    attacked.append(rule[1])
+attackers_dict = defaultdict(lambda: [])
+attacked_dict = defaultdict(lambda: [])
 
-attackers = attacks.keys()
+for rule in rules:
+    attackers_dict[rule[0]].append(rule[1])
+    attacked_dict[rule[1]].append(rule[0])
+
+attackers = attackers_dict.keys()
+attacked = attacked_dict.keys()
 attack_free = [a for a in attackers if a not in attacked]
 
 
@@ -27,7 +29,7 @@ def evaluate(ad, abort=True):
         if arg not in attackers:
             continue
 
-        for r2 in attacks[arg]:
+        for r2 in attackers_dict[arg]:
             print(arg, r2)
 
             if ad[r2] == val and val == 1:
