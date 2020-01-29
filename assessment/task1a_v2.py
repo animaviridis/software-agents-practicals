@@ -18,3 +18,6 @@ for rule in rules:
 print(f"\nAttack matrix:\n{attacks}")
 
 
+label_dict = {a: 0 if attacks.loc[:, a].any() else 1 for a in arguments_sorted}
+print(f"\nInitial labellings:\n{label_dict}")
+
