@@ -1,6 +1,8 @@
 import sys
 import numpy as np
 from pandas import DataFrame
+import networkx as nx
+import matplotlib.pyplot as plt
 
 from parser_abstract import read_file
 
@@ -27,16 +29,34 @@ def get_ins():
 
 
 def cleanup(arg_):
-    attacks.loc[attacks.loc[arg_] == 1, :] = 0
+    outs_ = attacks.index[attacks.loc[arg_] == 1]
+    attacks.loc[outs_, :] = 0
+    return outs_
 
 
 ins = list(get_ins())
+outs = []
 
 for arg in ins:
     print(f"Considering argument {arg}")
-    cleanup(arg)
+    label_dict[arg] = 1
+    outs.extend(cleanup(arg))
 
-    ins.extend(set(ins) - set(get_ins()))
+    ins.extend(set(get_ins()) - set(ins))
+    print(ins)
 
+for arg in outs:
+    label_dict[arg] = -1
 
 print(f"\nGrounded extension: {get_ins()}")
+
+
+fig, ax = plt.subplots()
+graph = nx.DiGraph()
+graph.add_edges_from(rules)
+colors = {-1: 'crimson', 0: 'lightslategrey', 1: 'limegreen'}
+nx.draw(graph, ax=ax,
+        with_labels={a: a for a in arguments_sorted},
+        node_color=[colors[label_dict[a]] for a in graph.nodes])
+ax.set_title("Argument framework graph", fontsize=16)
+plt.show()
