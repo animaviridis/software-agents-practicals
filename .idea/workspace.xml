@@ -40,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assessment/task1a_v2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="238">
+              <caret line="70" column="53" selection-start-line="70" selection-start-column="53" selection-end-line="70" selection-end-column="53" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -318,28 +318,7 @@
       <workItem from="1580068421929" duration="22740000" />
       <workItem from="1580330040437" duration="12820000" />
       <workItem from="1580345991393" duration="4948000" />
-      <workItem from="1580403829500" duration="2552000" />
-    </task>
-    <task id="LOCAL-00022" summary="[1-4] shapley values">
-      <created>1579469452595</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1579469452595</updated>
-    </task>
-    <task id="LOCAL-00023" summary="[1-4] shapley values">
-      <created>1579469503641</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1579469503641</updated>
-    </task>
-    <task id="LOCAL-00024" summary="[1-4] shapley values corrected">
-      <created>1579471111678</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1579471111678</updated>
+      <workItem from="1580403829500" duration="3398000" />
     </task>
     <task id="LOCAL-00025" summary="[1-4] shapley values for marginal contribution nets">
       <created>1579728678861</created>
@@ -663,11 +642,32 @@
       <option name="project" value="LOCAL" />
       <updated>1580404916741</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="[Assessment][1a][v2] refactored into class">
+      <created>1580406432203</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1580406432203</updated>
+    </task>
+    <task id="LOCAL-00072" summary="[Assessment][1a][v2] minor changes">
+      <created>1580406618237</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1580406618237</updated>
+    </task>
+    <task id="LOCAL-00073" summary="[Assessment][1a][v2] minor changes">
+      <created>1580406879715</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1580406879715</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108786000" />
+    <option name="totallyTimeSpent" value="109632000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -687,13 +687,13 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067115" side_tool="true" weight="0.45184135" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49932885" weight="0.32719547" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49932885" visible="true" weight="0.25070822" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49932885" visible="true" weight="0.32719547" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49932885" weight="0.25070822" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.3295302" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.3295302" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
@@ -765,8 +765,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[2-3] Code reformating contd." />
-    <MESSAGE value="[2-3] Dummy agent" />
     <MESSAGE value="[2-3] Rearranged" />
     <MESSAGE value="[2-3] Beta reputation system calculations" />
     <MESSAGE value="[2-3] BRS: discounting beliefs" />
@@ -790,7 +788,9 @@
     <MESSAGE value="[Assessment][1a][v2] initial labellings" />
     <MESSAGE value="[Assessment][1a][v2] grounded extension" />
     <MESSAGE value="[Assessment][1a][v2] grounded extension ins/outs/undec + new test file" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Assessment][1a][v2] grounded extension ins/outs/undec + new test file" />
+    <MESSAGE value="[Assessment][1a][v2] refactored into class" />
+    <MESSAGE value="[Assessment][1a][v2] minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Assessment][1a][v2] minor changes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/1-1/valueof.asl">
@@ -1088,8 +1088,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assessment/task1a_v2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="238">
+          <caret line="70" column="53" selection-start-line="70" selection-start-column="53" selection-end-line="70" selection-end-column="53" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

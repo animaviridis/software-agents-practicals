@@ -8,7 +8,7 @@ from parser_abstract import read_file
 
 
 class Extensor(object):
-    def __init__(self, file_name):
+    def __init__(self, file_name, verbose=False):
         arguments, rules = read_file(file_name)
         self.arguments = sorted(arguments)
         self._attacks = self.make_attacks_matrix(rules)
@@ -17,6 +17,8 @@ class Extensor(object):
         self.graph = nx.DiGraph()
         self.graph.add_edges_from(rules)
         self.graph_colors = {-1: 'crimson', 0: 'lightslategrey', 1: 'limegreen'}
+
+        self.print = print if verbose else lambda *args: None
 
     @property
     def attacks(self):
@@ -62,16 +64,15 @@ class Extensor(object):
         ins = list(self.get_ins())
 
         for arg in ins:
-            print(f"Considering argument {arg}")
+            self.print(f"Considering argument {arg}")
             self.labels[arg] = 1
             self._clear_defeated(arg)
 
             ins.extend(set(self.get_ins()) - set(ins))
-            print(ins)
 
-        print(f"\nGrounded extension - ins: {self.label_ins}")
-        print(f"Outs: {self.label_outs}")
-        print(f"Undec: {self.label_undec}")
+        self.print(f"\nGrounded extension - ins: {self.label_ins}")
+        self.print(f"Outs: {self.label_outs}")
+        self.print(f"Undec: {self.label_undec}")
 
     def plot(self, title=None):
         fig, ax = plt.subplots()
@@ -84,6 +85,7 @@ class Extensor(object):
 
 if __name__ == '__main__':
     f = sys.argv[1] if len(sys.argv) > 1 else 'aaf.aaf'
-    ext = Extensor(f)
+    ext = Extensor(f, True)
     ext.ground()
+    print(f"\nGrounded extension: {sorted(ext.label_ins)}")
     ext.plot()
