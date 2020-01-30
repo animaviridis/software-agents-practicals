@@ -8,11 +8,16 @@ from parser_abstract import read_file
 
 
 class Extensor(object):
+    class Contradiction(ValueError):
+        pass
+
     def __init__(self, file_name, verbose=False):
         arguments, rules = read_file(file_name)
         self.arguments = sorted(arguments)
         self._attacks = self.make_attacks_matrix(rules)
         self._labels = Series({a: 0 if self._attacks.loc[:, a].any() else 1 for a in self.arguments})
+
+        self.assumed_ins = []
 
         self.graph = nx.DiGraph()
         self.graph.add_edges_from(rules)
@@ -43,6 +48,10 @@ class Extensor(object):
     def label_undec(self):
         return self._get_by_label(0)
 
+    @property
+    def stable(self):
+        return len(self.label_undec) == 0
+
     def make_attacks_matrix(self, rules):
         la = len(self.arguments)
         attacks = DataFrame(np.zeros((la, la), int), index=self.arguments, columns=self.arguments)
@@ -57,11 +66,16 @@ class Extensor(object):
 
     def _clear_defeated(self, arg):
         outs = self.attacks.index[self.attacks.loc[arg] == 1]
+        if self.assumed_ins:
+            contr = [a for a in outs if a in self.assumed_ins]
+            if contr:
+                raise self.Contradiction(f"Contradiction: argument {contr[0]}, assumed to be IN, re-evaluated to OUT")
+
         self.labels[outs] = -1
         self.attacks.loc[outs, :] = 0
 
-    def ground(self):
-        ins = list(self.get_ins())
+    def ground(self, new_args: list = None):
+        ins = new_args or list(self.get_ins())
 
         for arg in ins:
             self.print(f"Considering argument {arg}")
@@ -70,9 +84,23 @@ class Extensor(object):
 
             ins.extend(set(self.get_ins()) - set(ins))
 
-        self.print(f"\nGrounded extension - ins: {self.label_ins}")
+        self.print(f"\nIns: {self.label_ins}")
         self.print(f"Outs: {self.label_outs}")
         self.print(f"Undec: {self.label_undec}")
+
+    def assume_in(self, arg):
+        if self.labels[arg]:
+            raise ValueError(f"Argument '{arg}' is not UNDEC")
+        self.print(f"\nAssuming argument '{arg}' to be IN")
+        self.assumed_ins.append(arg)
+
+        try:
+            self.ground([arg])
+        except self.Contradiction as e:
+            self.print(e)
+            return False
+        else:
+            return True
 
     def plot(self, title=None):
         fig, ax = plt.subplots()
@@ -89,3 +117,7 @@ if __name__ == '__main__':
     ext.ground()
     print(f"\nGrounded extension: {sorted(ext.label_ins)}")
     ext.plot()
+
+    if not ext.stable:
+        if ext.assume_in(ext.label_undec[0]):
+            ext.plot()
