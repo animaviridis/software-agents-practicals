@@ -1,64 +1,89 @@
 import sys
 import numpy as np
-from pandas import DataFrame
+from pandas import DataFrame, Series
 import networkx as nx
 import matplotlib.pyplot as plt
 
 from parser_abstract import read_file
 
 
-arguments, rules = read_file(sys.argv[1] if len(sys.argv) > 1 else 'aaf.aaf')  # TODO: parser
-la = len(arguments)
-arguments_sorted = sorted(arguments)
+class Extensor(object):
+    def __init__(self, file_name):
+        arguments, rules = read_file(file_name)
+        self.arguments = sorted(arguments)
+        self._attacks = self.make_attacks_matrix(rules)
+        self._labels = Series({a: 0 if self._attacks.loc[:, a].any() else 1 for a in self.arguments})
 
-attacks = DataFrame(np.zeros((la, la), int), index=arguments_sorted, columns=arguments_sorted)
+        self.graph = nx.DiGraph()
+        self.graph.add_edges_from(rules)
+        self.graph_colors = {-1: 'crimson', 0: 'lightslategrey', 1: 'limegreen'}
 
-for rule in rules:
-    attacks.loc[rule[0], rule[1]] = 1
+    @property
+    def attacks(self):
+        return self._attacks
+
+    @property
+    def labels(self):
+        return self._labels
+
+    def _get_by_label(self, lab):
+        return list(self.labels.index[self.labels == lab])
+
+    @property
+    def label_ins(self):
+        return self._get_by_label(1)
+
+    @property
+    def label_outs(self):
+        return self._get_by_label(-1)
+
+    @property
+    def label_undec(self):
+        return self._get_by_label(0)
+
+    def make_attacks_matrix(self, rules):
+        la = len(self.arguments)
+        attacks = DataFrame(np.zeros((la, la), int), index=self.arguments, columns=self.arguments)
+
+        for rule in rules:
+            attacks.loc[rule[0], rule[1]] = 1
+
+        return attacks
+
+    def get_ins(self):
+        return self.attacks.index[self.attacks.sum(axis=0) == 0]
+
+    def _clear_defeated(self, arg):
+        outs = self.attacks.index[self.attacks.loc[arg] == 1]
+        self.labels[outs] = -1
+        self.attacks.loc[outs, :] = 0
+
+    def ground(self):
+        ins = list(self.get_ins())
+
+        for arg in ins:
+            print(f"Considering argument {arg}")
+            self.labels[arg] = 1
+            self._clear_defeated(arg)
+
+            ins.extend(set(self.get_ins()) - set(ins))
+            print(ins)
+
+        print(f"\nGrounded extension - ins: {self.label_ins}")
+        print(f"Outs: {self.label_outs}")
+        print(f"Undec: {self.label_undec}")
+
+    def plot(self, title=None):
+        fig, ax = plt.subplots()
+        nx.draw(self.graph, ax=ax,
+                with_labels={a: a for a in self.graph.nodes},
+                node_color=[self.graph_colors[self.labels[a]] for a in self.graph.nodes])
+        ax.set_title(title or "Argument framework graph", fontsize=16)
+        plt.show()
 
 
-print(f"\nAttack matrix:\n{attacks}")
-
-label_dict = {a: 0 if attacks.loc[:, a].any() else 1 for a in arguments_sorted}
-
-print(f"\nInitial labellings:\n{label_dict}")
-
-
-def get_ins():
-    return attacks.index[attacks.sum(axis=0) == 0]
-
-
-def cleanup(arg_):
-    outs_ = attacks.index[attacks.loc[arg_] == 1]
-    attacks.loc[outs_, :] = 0
-    return outs_
-
-
-ins = list(get_ins())
-outs = []
-
-for arg in ins:
-    print(f"Considering argument {arg}")
-    label_dict[arg] = 1
-    outs.extend(cleanup(arg))
-
-    ins.extend(set(get_ins()) - set(ins))
-    print(ins)
-
-for arg in outs:
-    label_dict[arg] = -1
-
-print(f"\nGrounded extension - ins: {list(get_ins())}")
-print(f"Outs: {outs}")
-print(f"Undec: {[a for a, v, in label_dict.items() if not v]}")
-
-
-fig, ax = plt.subplots()
-graph = nx.DiGraph()
-graph.add_edges_from(rules)
-colors = {-1: 'crimson', 0: 'lightslategrey', 1: 'limegreen'}
-nx.draw(graph, ax=ax,
-        with_labels={a: a for a in arguments_sorted},
-        node_color=[colors[label_dict[a]] for a in graph.nodes])
-ax.set_title("Argument framework graph", fontsize=16)
-plt.show()
+if __name__ == '__main__':
+    f = sys.argv[1] if len(sys.argv) > 1 else 'aaf.aaf'
+    ext = Extensor(f)
+    ext.ground()
+    ext.plot()
