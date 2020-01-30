@@ -48,7 +48,9 @@ for arg in ins:
 for arg in outs:
     label_dict[arg] = -1
 
-print(f"\nGrounded extension: {get_ins()}")
+print(f"\nGrounded extension - ins: {list(get_ins())}")
+print(f"Outs: {outs}")
+print(f"Undec: {[a for a, v, in label_dict.items() if not v]}")
 
 
 fig, ax = plt.subplots()

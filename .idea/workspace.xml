@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb7ba7b8-62ea-4712-b276-a101e982bc3e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assessment/test_aaf/t5.aaf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assessment/task1a_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task1a_v2.py" afterDir="false" />
     </list>
@@ -37,14 +38,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assessment/task1a_v2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="867">
+              <caret line="51" column="22" lean-forward="true" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assessment/test_aaf/t5.aaf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2-3/trust_system/environment.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -167,7 +186,9 @@
         <option value="$PROJECT_DIR$/assessment/test_aaf/t3.aaf" />
         <option value="$PROJECT_DIR$/assessment/test_aaf/t4.aaf" />
         <option value="$PROJECT_DIR$/assessment/task1a.py" />
+        <option value="$PROJECT_DIR$/2-3/trust_system/environment.py" />
         <option value="$PROJECT_DIR$/assessment/task1a_v2.py" />
+        <option value="$PROJECT_DIR$/assessment/test_aaf/t5.aaf" />
       </list>
     </option>
   </component>
@@ -215,6 +236,12 @@
             <path>
               <item name="software-agents-practicals" type="b2602c69:ProjectViewProjectNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="2-3" type="462c0819:PsiDirectoryNode" />
+              <item name="trust_system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="software-agents-practicals" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="assessment" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -237,27 +264,6 @@
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
               <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
             </path>
-            <path>
-              <item name="software-agents-practicals" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="software-agents-practicals" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="lark" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="software-agents-practicals" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="lark" type="462c0819:PsiDirectoryNode" />
-              <item name="ext" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -272,16 +278,16 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\test_aaf" />
+      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\1-1\alltogether" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\test_aaf" />
       <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\aaf" />
       <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\class_2_3\trust_system" />
       <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\1-1\communication" />
       <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\1-1" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\test_aaf" />
-      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\1-1\alltogether" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -312,14 +318,8 @@
       <workItem from="1579513659448" duration="20060000" />
       <workItem from="1580068421929" duration="22740000" />
       <workItem from="1580330040437" duration="12820000" />
-      <workItem from="1580345991393" duration="2152000" />
-    </task>
-    <task id="LOCAL-00020" summary="[1-4] shapley: all possible coalitions">
-      <created>1579468560144</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1579468560144</updated>
+      <workItem from="1580345991393" duration="4948000" />
+      <workItem from="1580403829500" duration="1029000" />
     </task>
     <task id="LOCAL-00021" summary="[1-4] shapley: all possible permutations">
       <created>1579468590178</created>
@@ -657,17 +657,24 @@
       <option name="project" value="LOCAL" />
       <updated>1580339825019</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="[Assessment][1a][v2] grounded extension">
+      <created>1580385452299</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1580385452300</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103438000" />
+    <option name="totallyTimeSpent" value="107263000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22550336" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22885907" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -682,12 +689,12 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067115" side_tool="true" weight="0.45184135" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49932885" weight="0.32719547" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.49932885" visible="true" weight="0.45184135" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49932885" visible="true" weight="0.45184135" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.3295302" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.3295302" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
@@ -759,7 +766,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[2-3] Code from MyAberdeen" />
     <MESSAGE value="[2-3] Code reformating" />
     <MESSAGE value="[2-3] Code reformating contd." />
     <MESSAGE value="[2-3] Dummy agent" />
@@ -784,7 +790,8 @@
     <MESSAGE value="[Assessment][1a] Minor improvements contd." />
     <MESSAGE value="[Assessment][1a] ver2: attack matrix" />
     <MESSAGE value="[Assessment][1a][v2] initial labellings" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Assessment][1a][v2] initial labellings" />
+    <MESSAGE value="[Assessment][1a][v2] grounded extension" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Assessment][1a][v2] grounded extension" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/1-1/valueof.asl">
@@ -927,13 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2-3/trust_system/environment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/2-3/trust_system/trust_system.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1018,6 +1018,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assessment/test_aaf.aaf" />
+    <entry file="file://$PROJECT_DIR$/assessment/parser_abstract.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assessment/task1a.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1025,6 +1035,20 @@
           <folding>
             <element signature="e#122#132#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2-3/trust_system/environment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/test_aaf/t1.aaf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1056,30 +1080,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/parser_abstract.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/test_aaf/t1.aaf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assessment/task1a_v2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="867">
+          <caret line="51" column="22" lean-forward="true" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/test_aaf/t5.aaf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
         </state>
       </provider>
     </entry>
