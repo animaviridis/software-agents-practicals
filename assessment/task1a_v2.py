@@ -3,8 +3,16 @@ import numpy as np
 from pandas import DataFrame, Series
 import networkx as nx
 import matplotlib.pyplot as plt
+from copy import deepcopy
 
 from parser_abstract import read_file
+
+
+class Backup(object):
+    def __init__(self, extensor):
+        self.attacks = deepcopy(extensor.attacks)
+        self.labels = deepcopy(extensor.labels)
+        self.assumed_ins = deepcopy(extensor.assumed_ins)
 
 
 class Extensor(object):
@@ -14,8 +22,8 @@ class Extensor(object):
     def __init__(self, file_name, verbose=False):
         arguments, rules = read_file(file_name)
         self.arguments = sorted(arguments)
-        self._attacks = self.make_attacks_matrix(rules)
-        self._labels = Series({a: 0 if self._attacks.loc[:, a].any() else 1 for a in self.arguments})
+        self.attacks = self.make_attacks_matrix(rules)
+        self.labels = Series({a: 0 if self.attacks.loc[:, a].any() else 1 for a in self.arguments})
 
         self.assumed_ins = []
 
@@ -24,14 +32,7 @@ class Extensor(object):
         self.graph_colors = {-1: 'crimson', 0: 'lightslategrey', 1: 'limegreen'}
 
         self.print = print if verbose else lambda *args: None
-
-    @property
-    def attacks(self):
-        return self._attacks
-
-    @property
-    def labels(self):
-        return self._labels
+        self._backup = []
 
     def _get_by_label(self, lab):
         return list(self.labels.index[self.labels == lab])
@@ -88,6 +89,20 @@ class Extensor(object):
         self.print(f"Outs: {self.label_outs}")
         self.print(f"Undec: {self.label_undec}")
 
+    def back_up(self):
+        self._backup.append(Backup(self))
+
+    def roll_back(self):
+        if not self._backup:
+            raise RuntimeError("No backup available")
+
+        self.print("Roll back")
+
+        backup = self._backup.pop()
+        self.attacks = backup.attacks
+        self.labels = backup.labels
+        self.assumed_ins = backup.assumed_ins
+
     def assume_in(self, arg):
         if self.labels[arg]:
             raise ValueError(f"Argument '{arg}' is not UNDEC")
@@ -116,8 +131,27 @@ if __name__ == '__main__':
     ext = Extensor(f, True)
     ext.ground()
     print(f"\nGrounded extension: {sorted(ext.label_ins)}")
-    ext.plot()
+    ext.plot("AAF: grounded extension")
 
-    if not ext.stable:
-        if ext.assume_in(ext.label_undec[0]):
-            ext.plot()
+    def stabilise():
+        for uar in ext.label_undec:
+            ext.back_up()
+            if ext.assume_in(uar):
+                if ext.stable:
+                    new_stable = sorted(ext.label_ins)
+                    if new_stable not in stable:
+                        stable.append(new_stable)
+                        ext.plot("AAF: stable extension")
+                else:
+                    stabilise()
+            ext.roll_back()
+
+
+    if ext.stable:
+        stable = [ext.label_ins]
+
+    else:
+        stable = []
+        stabilise()
+
+    print(f"\nStable extensions: {stable}")
