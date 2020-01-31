@@ -20,6 +20,12 @@ class StableExtensor(Extensor):
         self.assumed_ins = []
         self._backup = []
 
+    def __enter__(self):
+        self.back_up()
+
+    def __exit__(self, *args, **kwargs):
+        self.roll_back()
+
     @property
     def stable(self):
         return len(self.label_undec) == 0
@@ -69,10 +75,9 @@ class StableExtensor(Extensor):
                 stable_ext.append(se)
         else:
             for arg in self.label_undec:
-                self.back_up()
-                if self.assume_in(arg):
-                    stable_ext = self.get_stable_extensions(stable_ext)
-                self.roll_back()
+                with self:
+                    if self.assume_in(arg):
+                        stable_ext = self.get_stable_extensions(stable_ext)
 
         return stable_ext
 
