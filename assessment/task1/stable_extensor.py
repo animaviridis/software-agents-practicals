@@ -1,6 +1,6 @@
 from copy import deepcopy
 
-from abstract_argumentation.ground_extensor import Extensor
+from ground_extensor import Extensor
 
 
 class Backup(object):
