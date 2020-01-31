@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb7ba7b8-62ea-4712-b276-a101e982bc3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assessment/task1/task1a.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assessment/task2/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/aaf.aaf" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task1/aaf.aaf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/abstract_argumentation/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task1/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/abstract_argumentation/extension_plotter.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task1/extension_plotter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/abstract_argumentation/ground_extensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task1/ground_extensor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/abstract_argumentation/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task1/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/abstract_argumentation/stable_extensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task1/stable_extensor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/argument.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task2/argument.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/atom.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task2/atom.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/labelling.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task2/labelling.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task2/parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/parser_abstract.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task1/parser_abstract.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/rule.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task2/rule.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/tandem.gr" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task2/tandem.gr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/task1a.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/task1a_v2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/task2a.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task2/task2a.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/task2b.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task2/task2b.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/task2c.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task2/task2c.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/task2d.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task2/task2d.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/task2e.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task2/task2e.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/test_aaf/t1.aaf" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task1/examples/t1.aaf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/test_aaf/t2.aaf" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task1/examples/t2.aaf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/test_aaf/t3.aaf" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task1/examples/t3.aaf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/test_aaf/t4.aaf" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task1/examples/t4.aaf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/test_aaf/t5.aaf" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task1/examples/t5.aaf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/test_aaf/t6.aaf" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task1/examples/t6.aaf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/undercut.gr" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task2/undercut.gr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assessment/task1/task1a.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task1/task1b.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,10 +13,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assessment/task1/task1a.py">
+        <entry file="file://$PROJECT_DIR$/assessment/task1/task1b.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state>
+              <caret column="85" selection-start-column="85" selection-end-column="85" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -55,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assessment/task1/ground_extensor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="374">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -172,7 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/1-1/valueof.asl" />
         <option value="$PROJECT_DIR$/1-1/print_numbers.asl" />
         <option value="$PROJECT_DIR$/1-1/env.py" />
         <option value="$PROJECT_DIR$/1-1/communication/sender.asl" />
@@ -223,6 +194,7 @@
         <option value="$PROJECT_DIR$/assessment/task1/main.py" />
         <option value="$PROJECT_DIR$/assessment/task1/stable_extensor.py" />
         <option value="$PROJECT_DIR$/assessment/task1/task1a.py" />
+        <option value="$PROJECT_DIR$/assessment/task1/task1b.py" />
       </list>
     </option>
   </component>
@@ -359,14 +331,7 @@
       <workItem from="1580068421929" duration="22740000" />
       <workItem from="1580330040437" duration="12820000" />
       <workItem from="1580345991393" duration="4948000" />
-      <workItem from="1580403829500" duration="15240000" />
-    </task>
-    <task id="LOCAL-00031" summary="[2-1] all items to be distributed">
-      <created>1579734129852</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1579734129852</updated>
+      <workItem from="1580403829500" duration="15528000" />
     </task>
     <task id="LOCAL-00032" summary="[2-1] brute-force allocation">
       <created>1579737154155</created>
@@ -704,14 +669,22 @@
       <option name="project" value="LOCAL" />
       <updated>1580495332283</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="[Assessment] Structure: divided files into task1 and task2">
+      <created>1580496191136</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1580496191136</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121474000" />
+    <option name="totallyTimeSpent" value="121762000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15503356" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -805,7 +778,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[2-3] Eigentrust - trust matrix normalisation" />
     <MESSAGE value="[2-3] Eigentrust - trust aggregation" />
     <MESSAGE value="[2-3] Eigentrust - trust aggregation loop" />
     <MESSAGE value="[2-3] Eigentrust - trust aggregation while loop" />
@@ -830,7 +802,8 @@
     <MESSAGE value="[Assessment][1a][v2] stable extensions as a method" />
     <MESSAGE value="[Assessment][1a][v2] stable extensions - cleanup" />
     <MESSAGE value="[Assessment][1][v2] Ground and stable extensions - classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Assessment][1][v2] Ground and stable extensions - classes" />
+    <MESSAGE value="[Assessment] Structure: divided files into task1 and task2" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Assessment] Structure: divided files into task1 and task2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/1-1/valueof.asl">
@@ -1067,7 +1040,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/task1/task1a.py">
+    <entry file="file://$PROJECT_DIR$/assessment/task1/task1b.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="9" selection-start-line="2" selection-end-line="9" />
@@ -1133,16 +1106,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/task1/ground_extensor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assessment/task1/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1167,10 +1130,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/task1/task1a.py">
+    <entry file="file://$PROJECT_DIR$/assessment/task1/ground_extensor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/task1/task1b.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="85" selection-start-column="85" selection-end-column="85" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
