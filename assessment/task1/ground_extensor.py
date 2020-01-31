@@ -16,10 +16,10 @@ class Extensor(object):
     def read_file(file_name):
         return read_file(file_name)
 
-    @staticmethod
-    def from_file(file_name, **kwargs):
+    @classmethod
+    def from_file(cls, file_name, **kwargs):
         arguments, rules = Extensor.read_file(file_name)
-        return Extensor(arguments, rules, **kwargs)
+        return cls(arguments, rules, **kwargs)
 
     def _get_by_label(self, lab):
         return list(self.labels.index[self.labels == lab])

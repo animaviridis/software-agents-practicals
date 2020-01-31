@@ -48,12 +48,12 @@ class StableExtensor(Extensor):
         if self.labels[arg]:
             raise ValueError(f"Argument '{arg}' is not UNDEC")
 
-        self.labels[arg] = 1
         self.print(f"\nAssuming argument '{arg}' to be IN")
+        self.labels[arg] = 1
         self.assumed_ins.append(arg)
 
         try:
-            self.ground([arg])
+            self.ground()
         except self.Contradiction as e:
             self.print(e)
             return False
