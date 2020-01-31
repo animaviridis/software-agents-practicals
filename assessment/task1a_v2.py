@@ -117,6 +117,24 @@ class Extensor(object):
         else:
             return True
 
+    def get_stable_extensions(self, stable_ext=None, plot=True):
+        stable_ext = stable_ext or []
+
+        if self.stable:
+            se = sorted(self.label_ins)
+            if se not in stable_ext:
+                stable_ext.append(se)
+                if plot:
+                    self.plot(f"AAF: stable extension ({se})")
+        else:
+            for arg in self.label_undec:
+                self.back_up()
+                if self.assume_in(arg):
+                    stable_ext = self.get_stable_extensions(stable_ext)
+                self.roll_back()
+
+        return stable_ext
+
     def plot(self, title=None):
         fig, ax = plt.subplots()
         nx.draw(self.graph, ax=ax,
@@ -128,30 +146,9 @@ class Extensor(object):
 
 if __name__ == '__main__':
     f = sys.argv[1] if len(sys.argv) > 1 else 'aaf.aaf'
-    ext = Extensor(f, True)
+    ext = Extensor(f, False)
     ext.ground()
     print(f"\nGrounded extension: {sorted(ext.label_ins)}")
-    ext.plot("AAF: grounded extension")
+    ext.plot(f"AAF: grounded extension ({ext.label_ins}])")
 
-    def stabilise():
-        for uar in ext.label_undec:
-            ext.back_up()
-            if ext.assume_in(uar):
-                if ext.stable:
-                    new_stable = sorted(ext.label_ins)
-                    if new_stable not in stable:
-                        stable.append(new_stable)
-                        ext.plot("AAF: stable extension")
-                else:
-                    stabilise()
-            ext.roll_back()
-
-
-    if ext.stable:
-        stable = [ext.label_ins]
-
-    else:
-        stable = []
-        stabilise()
-
-    print(f"\nStable extensions: {stable}")
+    print(f"\nStable extensions: {ext.get_stable_extensions()}")
