@@ -3,11 +3,14 @@ and defeasible arguments which can be generated. You should base your answer on 
 modifying it as needed."""
 
 import sys
+
 from argsolverdd.common.parser import read_file
+from argsolverdd.common.argument import Argument
+
 
 (rules, preferences) = read_file(sys.argv[1])
 
-arguments = make_arguments(rules)
+arguments = Argument.make_arguments(rules)
 strict = 0
 defeasible = 0
 for a in arguments:

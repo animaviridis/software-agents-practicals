@@ -1,5 +1,9 @@
+from argsolverdd.common.atom import Atom
+from typing import Set
+
+
 class Rule:
-    def __init__(self, name, premises, conclusions, strict):
+    def __init__(self, name: str, premises: Set[Atom], conclusions: Atom, strict: bool):
         self.name = name
         self.premises = premises
         self.conclusions = conclusions
