@@ -61,7 +61,7 @@ class Argument:
         return hash((self.top_rule, s))
 
     def __eq__(self, other):
-        if isinstance(other, type(self)):
+        if not isinstance(other, type(self)):
             return False
         if self.top_rule != other.top_rule:
             return False

@@ -8,7 +8,7 @@ from argsolverdd.common.parser import read_file
 from argsolverdd.common.argument import Argument
 
 
-(rules, preferences) = read_file(sys.argv[1])
+rules, preferences = read_file(sys.argv[1])
 
 arguments = Argument.make_arguments(rules)
 
