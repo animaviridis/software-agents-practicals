@@ -21,50 +21,51 @@ atom: NEG? NUMBERSTRING
 %ignore WS
 """
 
-parser=Lark(grammar,start='ruleset')
+parser = Lark(grammar, start='ruleset')
+
 
 class MyTransformer(Transformer):
-  def ruleset(self,args):
-    rules=set()
-    priorities=set()
-    for a in args:
-            if type(a)==Rule:
-                    #print(a)
-                    rules.add(a)
+    def ruleset(self, args):
+        rules = set()
+        priorities = set()
+        for a in args:
+            if type(a) == Rule:
+                # print(a)
+                rules.add(a)
             else:
-                    priorities.add(a)        
-                    
-    rh={}
-    preferred_to={} #preferred_to[x] means contents are preferred to x
-    for r in rules:
-            rh[r.name]=r
-            preferred_to[r]=set()
-    for p in priorities:
+                priorities.add(a)
+
+        rh = {}
+        preferred_to = {}  # preferred_to[x] means contents are preferred to x
+        for r in rules:
+            rh[r.name] = r
+            preferred_to[r] = set()
+        for p in priorities:
             preferred_to[rh[p[1]]].add(rh[p[0]])
-    return (rules,preferred_to)          
-  
-  def priority(self,args):
-    return(str(args[1]),str(args[0]))  
+        return rules, preferred_to
 
-  def arule(self,args):
-    name=str(args[0])
-    prems=args[1]
-    if prems==None:
-            prems=set()
-    strict=(args[2].type=="STRICT")
-    conc=args[3]
-    return Rule(name,prems,conc,strict)  
+    def priority(self, args):
+        return str(args[1]), str(args[0])
 
-  def atom(self,args):
-    if args[0].type=="NEG":
-            return Atom(True,str(args[1]))
-    else:
-            return Atom(False,str(args[0]))
+    def arule(self, args):
+        name = str(args[0])
+        prems = args[1]
+        if prems == None:
+            prems = set()
+        strict = (args[2].type == "STRICT")
+        conc = args[3]
+        return Rule(name, prems, conc, strict)
 
-  def prem(self,args):
-    return set(args)
+    def atom(self, args):
+        if args[0].type == "NEG":
+            return Atom(True, str(args[1]))
+        else:
+            return Atom(False, str(args[0]))
+
+    def prem(self, args):
+        return set(args)
 
 
 def read_file(filename):
-  with open(filename,'r') as myfile:
-      return MyTransformer().transform(parser.parse(myfile.read()))
+    with open(filename, 'r') as myfile:
+        return MyTransformer().transform(parser.parse(myfile.read()))
