@@ -7,13 +7,13 @@ class Atom:
         return Atom(not self.negated, self.literal)
 
     def contrary(self, atom):
-        return self.neg == atom
+        return self.neg() == atom
 
     def __hash__(self):
         return hash((self.negated, self.literal))
 
     def __eq__(self, other):
-        return type(self) == type(other) and self.negated == other.negated and self.literal == other.literal
+        return isinstance(other, type(self)) and self.negated == other.negated and self.literal == other.literal
 
     def __repr__(self):
         if self.negated:

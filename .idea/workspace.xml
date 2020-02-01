@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fb7ba7b8-62ea-4712-b276-a101e982bc3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/argument.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/argument.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/atom.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/atom.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+            <state relative-caret-position="561">
+              <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -28,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assessment/task2/task2a.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+            <state relative-caret-position="85">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#236#246#0" expanded="true" />
               </folding>
@@ -55,16 +55,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/atom.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/argument.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="85">
+              <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -104,7 +108,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/1-1/hello.asl" />
         <option value="$PROJECT_DIR$/1-1/grid_test.asl" />
         <option value="$PROJECT_DIR$/1-3.py" />
         <option value="$PROJECT_DIR$/1-3/voting.py" />
@@ -150,11 +153,12 @@
         <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/abstract/ground_extensor.py" />
         <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/abstract/aaf_analyser.py" />
         <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/abstract/stable_extensor.py" />
-        <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/parser.py" />
         <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/parser_abstract.py" />
         <option value="$PROJECT_DIR$/assessment/task2/task2a.py" />
         <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/rule.py" />
         <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/argument.py" />
+        <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/parser.py" />
+        <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/atom.py" />
       </list>
     </option>
   </component>
@@ -280,28 +284,7 @@
       <workItem from="1580330040437" duration="12820000" />
       <workItem from="1580345991393" duration="4948000" />
       <workItem from="1580403829500" duration="19407000" />
-      <workItem from="1580568137964" duration="2198000" />
-    </task>
-    <task id="LOCAL-00039" summary="[2-1] allocations with dummy agents">
-      <created>1579774083153</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1579774083153</updated>
-    </task>
-    <task id="LOCAL-00040" summary="[2-3] Code from MyAberdeen">
-      <created>1580068619750</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1580068619750</updated>
-    </task>
-    <task id="LOCAL-00041" summary="[2-3] Code reformating">
-      <created>1580068792737</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1580068792737</updated>
+      <workItem from="1580568137964" duration="7383000" />
     </task>
     <task id="LOCAL-00042" summary="[2-3] Code reformating contd.">
       <created>1580069238292</created>
@@ -625,11 +608,32 @@
       <option name="project" value="LOCAL" />
       <updated>1580569488481</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="[Assessment][2a] Refactoring contd.">
+      <created>1580570558727</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1580570558727</updated>
+    </task>
+    <task id="LOCAL-00089" summary="[Assessment][2a] Refactoring contd.">
+      <created>1580570632796</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1580570632796</updated>
+    </task>
+    <task id="LOCAL-00090" summary="[Assessment][2a] Refactoring contd.">
+      <created>1580570749396</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1580570749396</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127839000" />
+    <option name="totallyTimeSpent" value="133024000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -650,7 +654,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067115" side_tool="true" weight="0.45184135" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49932885" weight="0.32719547" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.49932885" visible="true" weight="0.3555241" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.49932885" visible="true" weight="0.44192636" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1056,33 +1060,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/atom.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/assessment/task2/tandem.gr">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/task2/task2a.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding>
-            <element signature="e#236#246#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1093,10 +1074,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/task2/task2a.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#236#246#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/argument.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="85">
+          <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/atom.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
         </state>
       </provider>
     </entry>
