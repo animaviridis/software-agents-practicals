@@ -30,7 +30,7 @@ class Argument:
 
     def __repr__(self):
         pn = ', '.join((p.name if isinstance(p, Argument) else str(p) for p in self.ground_premises))
-        return f"{self.name}: {pn} {'->' if self.strict() else '=>'} {self.conclusions}"
+        return f"{self.name}: {pn} {'->' if self.strict else '=>'} {self.conclusions}"
 
     def _add_sub_argument(self, arg):
         if not isinstance(arg, type(self)):
@@ -53,8 +53,9 @@ class Argument:
                 return False
         return True
 
+    @property
     def strict(self):
-        pass
+        return self._top_rule.strict
 
     @staticmethod
     def make_arguments(rules):

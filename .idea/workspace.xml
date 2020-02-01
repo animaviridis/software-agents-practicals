@@ -4,6 +4,7 @@
     <list default="true" id="fb7ba7b8-62ea-4712-b276-a101e982bc3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/argument.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/argument.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assessment/task2/task2a.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task2/task2a.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assessment/task2/task2a.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+            <state relative-caret-position="74">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="e#236#246#0" expanded="true" />
               </folding>
@@ -61,17 +62,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/atom.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+            <state relative-caret-position="170">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/argument.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="65" column="28" lean-forward="true" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
+            <state relative-caret-position="227">
+              <caret line="60" column="30" lean-forward="true" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -160,8 +161,8 @@
         <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/parser.py" />
         <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/atom.py" />
         <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/rule.py" />
-        <option value="$PROJECT_DIR$/assessment/task2/task2a.py" />
         <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/argument.py" />
+        <option value="$PROJECT_DIR$/assessment/task2/task2a.py" />
       </list>
     </option>
   </component>
@@ -287,14 +288,7 @@
       <workItem from="1580330040437" duration="12820000" />
       <workItem from="1580345991393" duration="4948000" />
       <workItem from="1580403829500" duration="19407000" />
-      <workItem from="1580568137964" duration="10033000" />
-    </task>
-    <task id="LOCAL-00044" summary="[2-3] Code reformating contd.">
-      <created>1580069528737</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1580069528737</updated>
+      <workItem from="1580568137964" duration="10629000" />
     </task>
     <task id="LOCAL-00045" summary="[2-3] Code reformating contd.">
       <created>1580069654389</created>
@@ -632,15 +626,21 @@
       <option name="project" value="LOCAL" />
       <updated>1580580073201</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="[Assessment][2a] Making arguments from rules - corrected">
+      <created>1580580587744</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1580580587744</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135674000" />
+    <option name="totallyTimeSpent" value="136270000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15704697" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -734,7 +734,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[Assessment][1a] Separated grounded and stable extensions" />
     <MESSAGE value="[Assessment][1a] More test files - from lecture slides" />
     <MESSAGE value="[Assessment][1a] Minor improvements" />
     <MESSAGE value="[Assessment][1a] Minor improvements contd." />
@@ -759,7 +758,8 @@
     <MESSAGE value="[Assessment][2a] Refactoring contd." />
     <MESSAGE value="[Assessment][2a] Bug fix in the original code" />
     <MESSAGE value="[Assessment][2a] Making arguments from rules - first approach" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Assessment][2a] Making arguments from rules - first approach" />
+    <MESSAGE value="[Assessment][2a] Making arguments from rules - corrected" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Assessment][2a] Making arguments from rules - corrected" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
@@ -1070,29 +1070,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/atom.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-198">
           <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/task2/task2a.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding>
-            <element signature="e#236#246#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1107,10 +1090,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/atom.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/argument.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="65" column="28" lean-forward="true" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
+        <state relative-caret-position="227">
+          <caret line="60" column="30" lean-forward="true" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/task2/task2a.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#236#246#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

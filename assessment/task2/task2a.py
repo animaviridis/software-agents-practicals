@@ -11,10 +11,12 @@ from argsolverdd.common.argument import Argument
 (rules, preferences) = read_file(sys.argv[1])
 
 arguments = Argument.make_arguments(rules)
+
 strict = 0
 defeasible = 0
+
 for a in arguments:
-    if a.strict():
+    if a.strict:
         strict += 1
     else:
         defeasible += 1
