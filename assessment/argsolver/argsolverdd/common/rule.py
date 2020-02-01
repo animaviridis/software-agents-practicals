@@ -27,8 +27,9 @@ class Rule:
         return hash((s, self.name, self.conclusions, self.strict))
 
     def __eq__(self, other):
-        if isinstance(other, type(self)):
+        if not isinstance(other, type(self)):
             return False
-        if self.premises - other.premises != set() or other.premises - self.premises != set():
-            return False
-        return self.name == other.name and self.conclusions == other.conc and self.strict == other.strict
+        return self.name == other.name \
+            and self.conclusions == other.conclusions \
+            and self.strict == other.strict \
+            and self.premises == other.premises
