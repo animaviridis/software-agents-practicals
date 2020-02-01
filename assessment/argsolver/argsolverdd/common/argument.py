@@ -50,7 +50,7 @@ class Argument:
 
         return f"{self.name}: {body}{self.conclusions}"
 
-    def _add_sub_argument(self, arg):
+    def add_sub_argument(self, arg):
         if not isinstance(arg, type(self)):
             raise TypeError(f"Argument is not an instance of {type(self)}")
         self._sub_arguments.add(arg)
@@ -95,6 +95,19 @@ class Argument:
                 return True
         return False
 
+
+class Arguments(dict):
+    def __init__(self, rules, preferences=None):
+        super().__init__({a.name: a for a in self.make_arguments(rules)})
+        self.rules = {r.name: r for r in rules}
+        self.preferences = preferences or {}
+
+    def __repr__(self):
+        return str(set(self.values()))
+
+    def __iter__(self):
+        yield from self.values()
+
     @staticmethod
     def make_arguments(rules):
         arguments = [Argument(f"A{i+1}", rule) for i, rule in enumerate(rules)]
@@ -103,15 +116,14 @@ class Argument:
                 if sub_arg_candidate == argument:
                     continue
                 if sub_arg_candidate.conclusions in argument.top_rule.premises:
-                    argument._add_sub_argument(sub_arg_candidate)
+                    argument.add_sub_argument(sub_arg_candidate)
 
         return arguments
 
-    @staticmethod
-    def make_attacks(arguments):
+    def generate_attacks(self):
         attacks = set()
-        for a1 in arguments:
-            for a2 in arguments:
+        for a1 in self.values():
+            for a2 in self.values():
                 if a1 == a2:
                     continue
 
@@ -120,9 +132,8 @@ class Argument:
 
         return attacks
 
-    @staticmethod
-    def make_defeats(arguments, attacks, preferences=None, weakest_link=True, elitist=True, restricted_rebut=False):
-        preferences = preferences or {}
+    def generate_defeats(self, weakest_link=True, elitist=True, restricted_rebut=False):
+        attacks = self.generate_attacks()
 
         return []
 

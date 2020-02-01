@@ -4,12 +4,12 @@
 import sys
 
 from argsolverdd.common.parser import read_file
-from argsolverdd.common.argument import Argument
+from argsolverdd.common.argument import Arguments
 
 
 rules, preferences = read_file(sys.argv[1])
 
-arguments = Argument.make_arguments(rules)
-attacks = Argument.make_attacks(arguments)
+arguments = Arguments(rules, preferences)
+attacks = arguments.generate_attacks()
 
 print(len(attacks))

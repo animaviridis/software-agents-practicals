@@ -5,7 +5,7 @@ used, your task here is to print out the number of defeats generated."""
 from argparse import ArgumentParser
 
 from argsolverdd.common.parser import read_file
-from argsolverdd.common.argument import Argument
+from argsolverdd.common.argument import Arguments
 
 # prepare arguments
 # argv[2] is one of "wd", "we", "ld", "le",
@@ -28,11 +28,8 @@ restr = parsed_args.restr == 'true'
 rules, preferences = read_file(parsed_args.fname)
 
 # generate arguments, attacks, and defeats
-arguments = Argument.make_arguments(rules)
-attacks = Argument.make_attacks(arguments)
-
-defeats = Argument.make_defeats(arguments, attacks, preferences=preferences,
-                                weakest_link=weakest, elitist=elitist, restricted_rebut=restr)
+arguments = Arguments(rules, preferences)
+defeats = arguments.generate_defeats(weakest_link=weakest, elitist=elitist, restricted_rebut=restr)
 
 print(len(defeats))
 

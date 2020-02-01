@@ -5,12 +5,12 @@ modifying it as needed."""
 import sys
 
 from argsolverdd.common.parser import read_file
-from argsolverdd.common.argument import Argument
+from argsolverdd.common.argument import Arguments
 
 
 rules, preferences = read_file(sys.argv[1])
 
-arguments = Argument.make_arguments(rules)
+arguments = Arguments(rules, preferences)
 
 strict = 0
 defeasible = 0
