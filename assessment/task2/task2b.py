@@ -1,5 +1,5 @@
 """Given a structured argumentation framework as input, your task here is to print out the number of attacks
-(not defeats) generated. You should base your answer on the file task2b.py, modifying it as needed."""
+(not defeats) generated."""
 
 import sys
 
