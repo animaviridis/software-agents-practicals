@@ -1,7 +1,7 @@
 import numpy as np
 from pandas import DataFrame, Series
 
-from parser_abstract import read_file
+from argsolverdd.common.parser_abstract import read_file
 
 
 class Extensor(object):

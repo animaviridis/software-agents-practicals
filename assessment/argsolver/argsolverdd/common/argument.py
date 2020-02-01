@@ -1,4 +1,4 @@
-from rule import *
+from argsolvrdd.common.rule import *
 class Argument:
   def __init__(self,toprule,subarguments):
     self.toprule=toprule

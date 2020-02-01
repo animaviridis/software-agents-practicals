@@ -1,6 +1,6 @@
 from lark import Lark, Transformer
-from rule import Rule
-from atom import Atom
+from argsolverdd.common.rule import Rule
+from argsolverdd.common.atom import Atom
 
 grammar = r"""
 NEG: "!"

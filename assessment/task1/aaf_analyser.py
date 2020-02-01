@@ -1,7 +1,7 @@
 import sys
 
-from stable_extensor import StableExtensor
-from extension_plotter import ExtensionPlotter
+from argsolverdd.abstract.stable_extensor import StableExtensor
+from argsolverdd.abstract.extension_plotter import ExtensionPlotter
 
 fname = sys.argv[1]
 arguments, rules = StableExtensor.read_file(fname)

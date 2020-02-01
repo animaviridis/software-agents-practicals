@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb7ba7b8-62ea-4712-b276-a101e982bc3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assessment/task1/task1a.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/task1/ground_extensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task1/ground_extensor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/task1/stable_extensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task1/stable_extensor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assessment/argsolver/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/abstract/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/structured/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assessment/argsolver/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assessment/task1/atom.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/atom.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assessment/task1/extension_plotter.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/abstract/extension_plotter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assessment/task1/ground_extensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/abstract/ground_extensor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assessment/task1/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/abstract/aaf_analyser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assessment/task1/parser_abstract.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/parser_abstract.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assessment/task1/rule.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/rule.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assessment/task1/stable_extensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/abstract/stable_extensor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assessment/task2/argument.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/argument.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assessment/task2/labelling.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/labelling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assessment/task2/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/parser.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,70 +29,70 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assessment/task1/task1b.py">
+        <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/parser_abstract.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assessment/task1/task1a.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#108#118#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assessment/task1/ground_extensor.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assessment/task1/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="55" lean-forward="true" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assessment/task1/stable_extensor.py">
+        <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/rule.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/abstract/ground_extensor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#4#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="3" column="48" lean-forward="true" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assessment/task1/extension_plotter.py">
+        <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/abstract/stable_extensor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+            <state relative-caret-position="34">
+              <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/argument.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="23" selection-start-column="23" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/atom.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/labelling.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/parser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/abstract/extension_plotter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -87,37 +101,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assessment/task1/examples/t5.aaf">
+        <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/abstract/aaf_analyser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assessment/task1/examples/t3.aaf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assessment/task1/examples/t6.aaf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assessment/task1/aaf.aaf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-column="23" />
+            <state relative-caret-position="51">
+              <caret line="3" column="28" lean-forward="true" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -155,13 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/1-1/env.py" />
-        <option value="$PROJECT_DIR$/1-1/communication/sender.asl" />
-        <option value="$PROJECT_DIR$/1-1/communication/receiver.asl" />
-        <option value="$PROJECT_DIR$/1-1/sth.asl" />
-        <option value="$PROJECT_DIR$/1-1/communication/env.py" />
-        <option value="$PROJECT_DIR$/1-1/alltogether/garbage_env.py" />
-        <option value="$PROJECT_DIR$/1-1/garbage.asl" />
         <option value="$PROJECT_DIR$/1-1/alltogether/garbage_sensor.asl" />
         <option value="$PROJECT_DIR$/1-1/alltogether/garbage_collector.asl" />
         <option value="$PROJECT_DIR$/1-1/hello.asl" />
@@ -206,14 +186,20 @@
         <option value="$PROJECT_DIR$/assessment/task1/task1a.py" />
         <option value="$PROJECT_DIR$/assessment/task1/ground_extensor.py" />
         <option value="$PROJECT_DIR$/assessment/task1/stable_extensor.py" />
+        <option value="$PROJECT_DIR$/assessment/argsolverdd/setup.py" />
+        <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/abstract/ground_extensor.py" />
+        <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/abstract/aaf_analyser.py" />
+        <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/abstract/stable_extensor.py" />
+        <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/argument.py" />
+        <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/parser.py" />
+        <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/parser_abstract.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="20" />
-    <option name="y" value="135" />
-    <option name="width" value="595" />
-    <option name="height" value="580" />
+    <option name="x" value="-10" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -265,6 +251,35 @@
               <item name="software-agents-practicals" type="b2602c69:ProjectViewProjectNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="assessment" type="462c0819:PsiDirectoryNode" />
+              <item name="argsolver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="software-agents-practicals" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="assessment" type="462c0819:PsiDirectoryNode" />
+              <item name="argsolver" type="462c0819:PsiDirectoryNode" />
+              <item name="argsolverdd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="software-agents-practicals" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="assessment" type="462c0819:PsiDirectoryNode" />
+              <item name="argsolver" type="462c0819:PsiDirectoryNode" />
+              <item name="argsolverdd" type="462c0819:PsiDirectoryNode" />
+              <item name="abstract" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="software-agents-practicals" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="assessment" type="462c0819:PsiDirectoryNode" />
+              <item name="argsolver" type="462c0819:PsiDirectoryNode" />
+              <item name="argsolverdd" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="software-agents-practicals" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="assessment" type="462c0819:PsiDirectoryNode" />
               <item name="task1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -306,11 +321,11 @@
       <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\1-1\alltogether" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\argsolver\argsolverdd" />
+      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\argsolver" />
+      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\argumentation\common" />
+      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\argumentation\abstract" />
       <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\task1" />
-      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\task2" />
-      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\test_aaf" />
-      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\aaf" />
-      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\class_2_3\trust_system" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -342,21 +357,7 @@
       <workItem from="1580068421929" duration="22740000" />
       <workItem from="1580330040437" duration="12820000" />
       <workItem from="1580345991393" duration="4948000" />
-      <workItem from="1580403829500" duration="16311000" />
-    </task>
-    <task id="LOCAL-00033" summary="[2-1] brute-force allocation - refactoring">
-      <created>1579737505054</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1579737505054</updated>
-    </task>
-    <task id="LOCAL-00034" summary="[2-1] brute-force allocation - minor changes">
-      <created>1579737679082</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1579737679082</updated>
+      <workItem from="1580403829500" duration="19161000" />
     </task>
     <task id="LOCAL-00035" summary="[2-1] brute-force allocation - minor changes">
       <created>1579737836516</created>
@@ -687,11 +688,25 @@
       <option name="project" value="LOCAL" />
       <updated>1580496556086</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="[Assessment][1a] Added file for task 1a (stable extensions)">
+      <created>1580497247697</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1580497247697</updated>
+    </task>
+    <task id="LOCAL-00083" summary="[Assessment][1a] Analysing stable extensions in context">
+      <created>1580497422546</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1580497422546</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122545000" />
+    <option name="totallyTimeSpent" value="125395000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -788,8 +803,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[2-3] Eigentrust - trust aggregation loop" />
-    <MESSAGE value="[2-3] Eigentrust - trust aggregation while loop" />
     <MESSAGE value="[2-3] Eigentrust - data from excel file" />
     <MESSAGE value="[2-3] Eigentrust - random / mean init trust vector" />
     <MESSAGE value="[Assessment] Original code files added" />
@@ -813,39 +826,11 @@
     <MESSAGE value="[Assessment][1][v2] Ground and stable extensions - classes" />
     <MESSAGE value="[Assessment] Structure: divided files into task1 and task2" />
     <MESSAGE value="[Assessment][1] Minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Assessment][1] Minor changes" />
+    <MESSAGE value="[Assessment][1a] Added file for task 1a (stable extensions)" />
+    <MESSAGE value="[Assessment][1a] Analysing stable extensions in context" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Assessment][1a] Analysing stable extensions in context" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/1-1/valueof.asl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1-1/alltogether/env.py" />
-    <entry file="file://$PROJECT_DIR$/1-1/print_numbers.asl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1-1/garbage.asl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1-1/alltogether/garbage_sensor.asl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="63" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1-3.py" />
     <entry file="file://$PROJECT_DIR$/1-1/alltogether/garbage_collector.asl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1040,16 +1025,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assessment/test_aaf.aaf" />
-    <entry file="file://$PROJECT_DIR$/assessment/task1/parser_abstract.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assessment/task1/task1b.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1088,13 +1063,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/task1/aaf.aaf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assessment/task1/examples/t5.aaf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1109,27 +1077,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/task1/examples/t6.aaf">
+    <entry file="file://$PROJECT_DIR$/assessment/task1/task1b.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/task1/extension_plotter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/task1/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="55" lean-forward="true" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -1146,35 +1097,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/task1/ground_extensor.py">
+    <entry file="file://$PROJECT_DIR$/assessment/task1/examples/t6.aaf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        <state relative-caret-position="68">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/task1/aaf.aaf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/argsolver/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/abstract/ground_extensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="48" lean-forward="true" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/abstract/aaf_analyser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="28" lean-forward="true" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/abstract/extension_plotter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/task1/task1b.py">
+    <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/abstract/stable_extensor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/task1/stable_extensor.py">
+    <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/argument.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#4#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/atom.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/labelling.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/parser_abstract.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/rule.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
