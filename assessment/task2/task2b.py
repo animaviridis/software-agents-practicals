@@ -14,8 +14,7 @@ for a1 in arguments:
         if a1 == a2:
             continue
 
-        if a1.rebuts(a2):
+        if a1.rebuts(a2) or a1.undercuts(a2):
             attacks.add((a1, a2))
 
 print(len(attacks))
-
