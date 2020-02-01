@@ -120,3 +120,9 @@ class Argument:
 
         return attacks
 
+    @staticmethod
+    def make_defeats(arguments, attacks, preferences=None, weakest_link=True, elitist=True, restricted_rebut=False):
+        preferences = preferences or {}
+
+        return []
+
