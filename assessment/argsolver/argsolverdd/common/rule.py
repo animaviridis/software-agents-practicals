@@ -1,8 +1,8 @@
 class Rule:
-    def __init__(self, name, premises, conc, strict):
+    def __init__(self, name, premises, conclusions, strict):
         self.name = name
         self.premises = premises
-        self.conclusions = conc
+        self.conclusions = conclusions
         self.strict = strict
 
     def __repr__(self):
@@ -23,7 +23,7 @@ class Rule:
         return hash((s, self.name, self.conclusions, self.strict))
 
     def __eq__(self, other):
-        if type(self) != type(other):
+        if isinstance(other, type(self)):
             return False
         if self.premises - other.premises != set() or other.premises - self.premises != set():
             return False
