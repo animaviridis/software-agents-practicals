@@ -106,3 +106,17 @@ class Argument:
                     argument._add_sub_argument(sub_arg_candidate)
 
         return arguments
+
+    @staticmethod
+    def make_attacks(arguments):
+        attacks = set()
+        for a1 in arguments:
+            for a2 in arguments:
+                if a1 == a2:
+                    continue
+
+                if a1.rebuts(a2) or a1.undercuts(a2):
+                    attacks.add((a1, a2))
+
+        return attacks
+
