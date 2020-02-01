@@ -1,5 +1,7 @@
-from argsolverdd.common.atom import Atom
 from typing import Set
+
+from argsolverdd.common.atom import Atom
+from argsolverdd.common.misc import NameDict
 
 
 class Rule:
@@ -33,3 +35,8 @@ class Rule:
             and self.conclusions == other.conclusions \
             and self.strict == other.strict \
             and self.premises == other.premises
+
+
+class Rules(NameDict):
+    def __init__(self, rules):
+        super(Rules, self).__init__(rules)

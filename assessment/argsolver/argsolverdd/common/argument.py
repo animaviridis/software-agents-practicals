@@ -1,5 +1,6 @@
-from argsolverdd.common.rule import Rule
+from argsolverdd.common.rule import Rule, Rules
 from argsolverdd.common.atom import Atom
+from argsolverdd.common.misc import NameDict
 
 
 class Argument:
@@ -96,17 +97,11 @@ class Argument:
         return False
 
 
-class Arguments(dict):
+class Arguments(NameDict):
     def __init__(self, rules, preferences=None):
-        super().__init__({a.name: a for a in self.make_arguments(rules)})
-        self.rules = {r.name: r for r in rules}
+        super().__init__(self.make_arguments(rules))
+        self.rules = Rules(rules)
         self.preferences = preferences or {}
-
-    def __repr__(self):
-        return str(set(self.values()))
-
-    def __iter__(self):
-        yield from self.values()
 
     @staticmethod
     def make_arguments(rules):
