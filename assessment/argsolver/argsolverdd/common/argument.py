@@ -74,6 +74,15 @@ class Argument:
     def strict(self):
         return self._top_rule.strict
 
+    def rebuts(self, other):
+        if not isinstance(other, type(self)):
+            raise TypeError(f"{other} is not an instance of {type(self)}")
+
+        for osub in other.all_sub_arguments:
+            if self.conclusions.contrary(osub.conclusions):
+                return True
+        return False
+
     @staticmethod
     def make_arguments(rules):
         arguments = [Argument(f"A{i+1}", rule) for i, rule in enumerate(rules)]
