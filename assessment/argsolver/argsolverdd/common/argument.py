@@ -6,7 +6,6 @@ class Argument:
         self.name = name
         self._top_rule = top_rule
         self.sub_arguments = set()
-        self._prem_dict = {p: None for p in self._top_rule.premises}
 
     @property
     def top_rule(self):
@@ -14,18 +13,24 @@ class Argument:
 
     @property
     def premises(self):
-        return {v or k for k, v in self._prem_dict.items()}
+        return self._top_rule.premises
 
     @property
-    def premise_names(self):
-        return ', '.join([v.name if v else str(k) for k, v in self._prem_dict.items()])
+    def ground_premises(self):
+        prem = set(self.premises)
+        for arg in self.sub_arguments:
+            prem.add(arg)
+            prem -= {arg.conclusions}
+
+        return prem
 
     @property
     def conclusions(self):
         return self._top_rule.conclusions
 
     def __repr__(self):
-        return f"{self.name}: {self.premise_names} {'->' if self.strict() else '=>'} {self.conclusions}"
+        pn = ', '.join((p.name if isinstance(p, Argument) else str(p) for p in self.ground_premises))
+        return f"{self.name}: {pn} {'->' if self.strict() else '=>'} {self.conclusions}"
 
     def _add_sub_argument(self, arg):
         if not isinstance(arg, type(self)):
