@@ -20,7 +20,8 @@ arguments = Arguments(rules)
 
 # semantics in the next line can be one of "grounded","preferred", or "stable"
 # returns a collection of extensions, each of which is a collection of arguments
-extensions = arguments.evaluate(pa.extension, weakest_link=pa.weakest, elitist=pa.elitist, restricted_rebut=pa.restr)
+extensions = arguments.evaluate(pa.extension, weakest_link=pa.weakest,
+                                elitist=pa.elitist, restricted_rebut=pa.restr)[0]
 
 conclusions = []  # a list of lists of the conclusions
 for ext in extensions: 

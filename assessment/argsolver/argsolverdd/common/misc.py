@@ -1,7 +1,7 @@
 from argparse import ArgumentParser
 
 
-def parse_cmd_args(add_principles=False, add_extension=False):
+def parse_cmd_args(add_principles=False, add_extension=False, add_target=False):
     parser = ArgumentParser()
     parser.add_argument('fname', type=str, help="Data file name")
     parser.add_argument('--verbose', action='store_true', dest='verbose')
@@ -14,6 +14,9 @@ def parse_cmd_args(add_principles=False, add_extension=False):
     if add_extension:
         parser.add_argument('extension', type=str, choices=["grounded", "preferred", "stable"],
                             help="Extension to be computed")
+
+    if add_target:
+        parser.add_argument('target', type=str, help="Target conclusion")
 
     parsed_args = parser.parse_args()
     if add_principles:

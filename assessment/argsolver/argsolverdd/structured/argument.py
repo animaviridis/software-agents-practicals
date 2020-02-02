@@ -184,12 +184,13 @@ class Arguments(NameDict):
         ext.ground()
 
         if extension_code == 'grounded':
-            extensions = [ext.get_grounded_extension()[0]]
+            extension, labellings = ext.get_grounded_extension()
+            extensions = [extension]
         elif extension_code == 'stable':
-            extensions = ext.get_stable_extensions()[0]
+            extensions, labellings = ext.get_stable_extensions()
         elif extension_code == 'preferred':
-            extensions = ext.get_preferred_extensions()[0]
+            extensions, labellings = ext.get_preferred_extensions()
         else:
             raise ValueError(f"Invalid extension code: '{extension_code}'")
 
-        return [[self[a] for a in ext] for ext in extensions]
+        return [[self[a] for a in ext] for ext in extensions], labellings
