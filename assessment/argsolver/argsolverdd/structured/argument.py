@@ -184,8 +184,9 @@ class Arguments(NameDict):
         ext.ground()
 
         if extension_code == 'grounded':
-            extension, labellings = ext.get_grounded_extension()
+            extension, labelling = ext.get_grounded_extension()
             extensions = [extension]
+            labellings = [labelling]
         elif extension_code == 'stable':
             extensions, labellings = ext.get_stable_extensions()
         elif extension_code == 'preferred':
