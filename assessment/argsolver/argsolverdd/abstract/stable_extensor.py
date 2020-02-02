@@ -66,18 +66,47 @@ class StableExtensor(Extensor):
         else:
             return True
 
-    def get_stable_extensions(self, stable_ext=None):
-        stable_ext = stable_ext or []
+    def get_stable_extensions(self):
+        return self.get_preferred_extensions(require_stable=True)
 
-        if self.stable:
+    def get_preferred_extensions(self, require_stable=False, ext_list=None, lab_list=None):
+        ext_list = ext_list or []
+        lab_list = lab_list or []
+
+        if self.stable or not require_stable:
             se = sorted(self.label_ins)
-            if se not in stable_ext:
-                stable_ext.append(se)
-        else:
+            if se not in ext_list:
+                ext_list.append(se)
+                lab_list.append(deepcopy(self.labels))
+
+        if not self.stable:
             for arg in self.label_undec:
                 with self:
                     if self.assume_in(arg):
-                        stable_ext = self.get_stable_extensions(stable_ext)
+                        ext_list, lab_list = self.get_preferred_extensions(require_stable=require_stable,
+                                                                           ext_list=ext_list, lab_list=lab_list)
 
-        return stable_ext
+        if require_stable:
+            return ext_list, lab_list
 
+        # for preferred extensions only - stable are already complete
+        return self.reduce_extensions(ext_list, lab_list)
+
+    @staticmethod
+    def reduce_extensions(ext_list, lab_list):
+        """reduce the preferred extensions w.r.t. set inclusion"""
+
+        ext_set_list = [set(ext) for ext in ext_list]
+
+        final_ext_list = []
+        final_lab_list = []
+
+        for i, ext in enumerate(ext_set_list):
+            ext_set_sublist = ext_set_list[:i] + ext_set_list[i + 1:]
+            if any(ext.issubset(other_ext) for other_ext in ext_set_sublist):
+                continue
+
+            final_ext_list.append(ext_list[i])
+            final_lab_list.append(lab_list[i])
+
+        return final_ext_list, final_lab_list

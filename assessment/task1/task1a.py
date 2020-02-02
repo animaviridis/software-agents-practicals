@@ -7,4 +7,4 @@ from argsolverdd.abstract.stable_extensor import StableExtensor
 pa = parse_cmd_args()
 
 ext = StableExtensor.from_file(pa.fname, verbose=pa.verbose)
-print(ext.get_stable_extensions())
+print(ext.get_stable_extensions()[0])
