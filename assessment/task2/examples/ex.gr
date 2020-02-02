@@ -1,0 +1,9 @@
+R0: -> winter
+R1: winter => heating
+R2: winter => !window
+R3: heating => window
+
+
+R2 <= R3
+R1 <= R2
+R1 <= R3

@@ -1,0 +1,8 @@
+D1: WearsRing => Married
+D2: PartyAnimal => Bachelor
+S1: Married -> !Bachelor
+S2: Bachelor -> !Married
+F1: -> WearsRing
+F2: -> PartyAnimal
+
+D2 <= D1
