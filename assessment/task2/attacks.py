@@ -3,8 +3,8 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 
-from argsolverdd.common.parser import read_file
-from argsolverdd.common.argument import Argument
+from argsolverdd.structured.parser import read_file
+from argsolverdd.structured.argument import Argument
 
 
 rules, preferences = read_file(sys.argv[1])

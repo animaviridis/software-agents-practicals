@@ -4,8 +4,8 @@ used, your task here is to print out the number of defeats generated."""
 
 from argparse import ArgumentParser
 
-from argsolverdd.common.parser import read_file
-from argsolverdd.common.argument import Arguments
+from argsolverdd.structured.parser import read_file
+from argsolverdd.structured.argument import Arguments
 
 # prepare arguments
 # argv[2] is one of "wd", "we", "ld", "le",

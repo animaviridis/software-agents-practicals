@@ -4,8 +4,8 @@ modifying it as needed."""
 
 import sys
 
-from argsolverdd.common.parser import read_file
-from argsolverdd.common.argument import Arguments
+from argsolverdd.structured.parser import read_file
+from argsolverdd.structured.argument import Arguments
 
 
 rules, preferences = read_file(sys.argv[1])
