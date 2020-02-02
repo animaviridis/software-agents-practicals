@@ -27,15 +27,29 @@ class Argument:
     def top_rule(self):
         return self._top_rule
 
-    def _get_all_rules(self):
-        r = [self._top_rule]
-        for sub in self._sub_arguments:
-            r.extend(sub.all_rules)
-        return set(r)
-
     @property
     def all_rules(self):
-        return Rules(self._get_all_rules())
+        r = [self._top_rule]
+
+        for sub in self._sub_arguments:
+            r.extend(sub.all_rules)
+
+        return Rules(r)
+
+    @property
+    def all_defeasible_rules(self):
+        return Rules([r for r in self.all_rules if not r.strict])
+
+    @property
+    def last_defeasible_rules(self):
+        if not self._top_rule.strict:
+            return [self._top_rule]
+
+        def_rules = []
+        for sub in self._sub_arguments:
+            def_rules.extend(sub.last_defeasible_rules)
+
+        return Rules(def_rules)
 
     @property
     def premises(self):
