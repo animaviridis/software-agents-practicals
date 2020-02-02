@@ -175,3 +175,7 @@ class Arguments(NameDict):
 
         return defeats
 
+    def evaluate(self, extension: str, **kwargs):
+        defeats = self.generate_defeats(**kwargs)
+        return []
+

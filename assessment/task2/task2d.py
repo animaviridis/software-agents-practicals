@@ -1,3 +1,7 @@
+"""Given a structured argumentation framework as input, together with the preference principles and rebut
+used as well as a semantics, your task is to print out the justified conclusions of the extensions.
+Note that this prints out every extension ordered alphabetically and by length."""
+
 from argsolverdd.common.misc import parse_cmd_args
 from argsolverdd.structured.parser import read_file
 from argsolverdd.structured.argument import Arguments
@@ -18,16 +22,16 @@ defeats = arguments.generate_defeats(weakest_link=pa.weakest, elitist=pa.elitist
 
 # semantics in the next line can be one of "grounded","preferred", or "stable"
 # returns a collection of extensions, each of which is a collection of arguments
-extensions = evaluate(arguments, defeats, pa.extension)
+extensions = arguments.evaluate(pa.extension)
 
 conclusions = []  # a list of lists of the conclusions
 for ext in extensions: 
-        l = []  # will hold all conclusions of the extension
+        ext_conc = []  # will hold all conclusions of the extension
         for argument in ext:
-                l.append(str(argument.conclusion()))
-        l.sort()
+                ext_conc.append(str(argument.conclusions()))
+        ext_conc.sort()
 
-        conclusions.append(l)
+        conclusions.append(ext_conc)
 
 conclusions.sort()
 conclusions.sort(key=len)
