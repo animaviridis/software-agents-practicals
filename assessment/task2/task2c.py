@@ -1,9 +1,7 @@
 """Given a structured argumentation framework as input, together with the preference principles and rebut
 used, your task here is to print out the number of defeats generated."""
 
-
-from argparse import ArgumentParser
-
+from argsolverdd.common.misc import parse_cmd_args
 from argsolverdd.structured.parser import read_file
 from argsolverdd.structured.argument import Arguments
 
@@ -12,24 +10,20 @@ from argsolverdd.structured.argument import Arguments
 # representing the weakest link democratic/weakest link elitist/last link democratic/last link elitist principles.
 # argv[3] is "true" or "false" representing whether rebut is restricted (true) or unrestricted (false)
 
-parser = ArgumentParser()
-parser.add_argument('fname', type=str, help="Data file name")
-parser.add_argument('principle', type=str, choices=['wd', 'we', 'ld', 'le'],
-                    help='preference principles: weakest/last and democratic/elitist')
-parser.add_argument('restr', type=str, choices=['true', 'false'])
 
-parsed_args = parser.parse_args()
-weakest = parsed_args.principle[0] == 'w'
-elitist = parsed_args.principle[1] == 'e'
-restr = parsed_args.restr == 'true'
+pa = parse_cmd_args(add_principles=True)
 
+if pa.verbose:
+    print(f"{'weakest' if pa.weakest else 'last'} link "
+          f"{'elitist' if pa.elitist else 'democratic'} principle "
+          f"with {'' if pa.restr else 'un'}restricted rebut")
 
 # parse the file
-rules = read_file(parsed_args.fname)
+rules = read_file(pa.fname)
 
 # generate arguments, attacks, and defeats
 arguments = Arguments(rules)
-defeats = arguments.generate_defeats(weakest_link=weakest, elitist=elitist, restricted_rebut=restr)
+defeats = arguments.generate_defeats(weakest_link=pa.weakest, elitist=pa.elitist, restricted_rebut=pa.restr)
 
 print(len(defeats))
 
