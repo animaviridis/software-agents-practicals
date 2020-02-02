@@ -38,13 +38,27 @@ class Rule:
             and self.strict == other.strict \
             and self.premises == other.premises
 
+    def __ge__(self, other):
+        if not isinstance(other, type(self)):
+            raise TypeError(f"Cannot compare Rule with {type(other)}")
+
+        if self.strict and not other.strict:
+            return True
+
+        if other.strict and not self.strict:
+            return False
+
+        return other in self.preferred_to
+
+    @staticmethod
+    def assign_preferences(ruleset, pref_dict):
+        for rule in ruleset:
+            rule.preferred_to = pref_dict[rule]
+
 
 class Rules(NameDict):
-    def __init__(self, rules, preferences=None):
+    def __init__(self, rules):
         super(Rules, self).__init__(rules)
-        preferences = preferences or defaultdict(lambda: set())
-        for rule, pref in preferences.items():
-            self[rule].preferred_to = pref
 
     def _compare_elitist(self, ruleset1, ruleset2) -> bool:
         """There is some rule in set R1 which is preferred (>=) to all rules in ser R2

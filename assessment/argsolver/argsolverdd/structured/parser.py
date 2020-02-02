@@ -1,5 +1,5 @@
 from lark import Lark, Transformer
-from argsolverdd.common.rule import Rule
+from argsolverdd.common.rule import Rule, Rules
 from argsolverdd.common.atom import Atom
 
 grammar = r"""
@@ -42,7 +42,9 @@ class MyTransformer(Transformer):
             preferred_to[r] = set()
         for p in priorities:
             preferred_to[rh[p[1]]].add(rh[p[0]])
-        return rules, preferred_to
+
+        Rule.assign_preferences(rules, preferred_to)
+        return Rules(rules)
 
     def priority(self, args):
         return str(args[1]), str(args[0])

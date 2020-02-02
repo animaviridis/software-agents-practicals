@@ -25,10 +25,10 @@ restr = parsed_args.restr == 'true'
 
 
 # parse the file
-rules, preferences = read_file(parsed_args.fname)
+rules = read_file(parsed_args.fname)
 
 # generate arguments, attacks, and defeats
-arguments = Arguments(rules, preferences)
+arguments = Arguments(rules)
 defeats = arguments.generate_defeats(weakest_link=weakest, elitist=elitist, restricted_rebut=restr)
 
 print(len(defeats))

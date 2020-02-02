@@ -1,4 +1,4 @@
-from argsolverdd.common.rule import Rule, Rules
+from argsolverdd.common.rule import Rule
 from argsolverdd.common.atom import Atom
 from argsolverdd.common.misc import NameDict
 
@@ -105,9 +105,9 @@ class Argument:
 
 
 class Arguments(NameDict):
-    def __init__(self, rules, preferences=None):
+    def __init__(self, rules):
         super().__init__(self.make_arguments(rules))
-        self.rules = Rules(rules)
+        self.rules = rules
 
     @staticmethod
     def make_arguments(rules):

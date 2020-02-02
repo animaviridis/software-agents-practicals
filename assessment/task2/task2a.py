@@ -8,9 +8,9 @@ from argsolverdd.structured.parser import read_file
 from argsolverdd.structured.argument import Arguments
 
 
-rules, preferences = read_file(sys.argv[1])
+rules = read_file(sys.argv[1])
 
-arguments = Arguments(rules, preferences)
+arguments = Arguments(rules)
 
 strict = 0
 defeasible = 0
