@@ -2,13 +2,12 @@
 and defeasible arguments which can be generated. You should base your answer on the file task2a.py,
 modifying it as needed."""
 
-import sys
-
+from argsolverdd.common.misc import parse_cmd_args
 from argsolverdd.structured.parser import read_file
 from argsolverdd.structured.argument import Arguments
 
-
-rules = read_file(sys.argv[1])
+pa = parse_cmd_args()
+rules = read_file(pa.fname)
 
 arguments = Arguments(rules)
 
