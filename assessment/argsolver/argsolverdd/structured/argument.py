@@ -28,6 +28,13 @@ class Argument:
         return self._top_rule
 
     @property
+    def all_rules(self):
+        r = [self._top_rule]
+        for sub in self._sub_arguments:
+            r.extend(sub.all_rules)
+        return r
+
+    @property
     def premises(self):
         if not self._sub_arguments:
             return self._top_rule.premises or {self._top_rule.conclusions}
@@ -101,7 +108,6 @@ class Arguments(NameDict):
     def __init__(self, rules, preferences=None):
         super().__init__(self.make_arguments(rules))
         self.rules = Rules(rules)
-        self.preferences = preferences or {}
 
     @staticmethod
     def make_arguments(rules):
