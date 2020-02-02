@@ -43,7 +43,7 @@ class Argument:
     @property
     def last_defeasible_rules(self):
         if not self._top_rule.strict:
-            return [self._top_rule]
+            return Rules([self._top_rule])
 
         def_rules = []
         for sub in self._sub_arguments:
@@ -104,13 +104,18 @@ class Argument:
     def strict(self):
         return self._top_rule.strict
 
-    def rebuts(self, other):
+    def rebuts(self, other, restricted_rebut=False):
         if not isinstance(other, type(self)):
             raise TypeError(f"{other} is not an instance of {type(self)}")
 
         for osub in other.all_sub_arguments:
+            if restricted_rebut:
+                if osub.strict:
+                    continue  # in restricted rebut, the attacked argument's top rule must be defeasible -> return False
+
             if self.conclusions.contrary(osub.conclusions):
                 return True
+
         return False
 
     def undercuts(self, other):
@@ -148,20 +153,20 @@ class Arguments(NameDict):
 
         return arguments
 
-    def generate_attacks(self):
+    def generate_attacks(self, restricted_rebut=False):
         attacks = set()
         for a1 in self:
             for a2 in self:
                 if a1 == a2:
                     continue
 
-                if a1.rebuts(a2) or a1.undercuts(a2):
+                if a1.rebuts(a2, restricted_rebut=restricted_rebut) or a1.undercuts(a2):
                     attacks.add((a1, a2))
 
         return attacks
 
     def generate_defeats(self, weakest_link=True, elitist=True, restricted_rebut=False):
-        attacks = self.generate_attacks()
+        attacks = self.generate_attacks(restricted_rebut=restricted_rebut)
 
         defeats = set()
         for a1, a2 in attacks:

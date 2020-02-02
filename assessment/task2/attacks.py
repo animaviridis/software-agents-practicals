@@ -25,7 +25,7 @@ def plot_graph(data, axis, title=None, color='lightblue'):
 
 
 fig, ax = plt.subplots(2, 1)
-plot_graph(arguments.generate_attacks(), axis=ax[0], title="Attacks", color='lightblue')
-plot_graph(arguments.generate_defeats(), axis=ax[1], title="Defeats", color='lightgreen')
+plot_graph(arguments.generate_attacks(restricted_rebut=False), axis=ax[0], title="Attacks", color='lightblue')
+plot_graph(arguments.generate_defeats(restricted_rebut=True), axis=ax[1], title="Defeats", color='lightgreen')
 fig.subplots_adjust(hspace=0.3, left=0.2, right=0.8)
 plt.show()
