@@ -170,7 +170,7 @@ class Arguments(NameDict):
 
         defeats = set()
         for a1, a2 in attacks:
-            if a1.preferred_to(a2, weakest_link=weakest_link, elitist=elitist):
+            if a1.undercuts(a2) or a1.preferred_to(a2, weakest_link=weakest_link, elitist=elitist):
                 defeats.add((a1, a2))
 
         return defeats

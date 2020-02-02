@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb7ba7b8-62ea-4712-b276-a101e982bc3e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assessment/task2/examples/tandem2.gr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/structured/argument.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/argsolver/argsolverdd/structured/argument.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assessment/task2/task2d.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task2/task2d.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assessment/task2/attacks.py" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task2/attacks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assessment/task2/tandem.gr" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task2/examples/tandem.gr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assessment/task2/undercut.gr" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/task2/examples/undercut.gr" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/structured/argument.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2144">
-              <caret line="178" column="48" selection-start-line="178" selection-start-column="48" selection-end-line="178" selection-end-column="48" />
+            <state relative-caret-position="216">
+              <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -26,11 +29,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assessment/task2/examples/tandem2.gr">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assessment/task2/examples/undercut.gr">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assessment/task2/task2d.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+            <state relative-caret-position="185">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -42,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/misc.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="233">
-              <caret line="14" column="52" lean-forward="true" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+              <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -50,7 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assessment/task2/attacks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="136">
+              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
               <folding>
                 <element signature="e#1#22#0" expanded="true" />
               </folding>
@@ -139,12 +161,12 @@
         <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/structured/parser.py" />
         <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/rule.py" />
         <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/misc.py" />
-        <option value="$PROJECT_DIR$/assessment/task2/attacks.py" />
         <option value="$PROJECT_DIR$/assessment/task2/task2b.py" />
         <option value="$PROJECT_DIR$/assessment/task2/task2a.py" />
         <option value="$PROJECT_DIR$/assessment/task2/task2c.py" />
-        <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/structured/argument.py" />
         <option value="$PROJECT_DIR$/assessment/task2/task2d.py" />
+        <option value="$PROJECT_DIR$/assessment/argsolver/argsolverdd/structured/argument.py" />
+        <option value="$PROJECT_DIR$/assessment/task2/attacks.py" />
       </list>
     </option>
   </component>
@@ -223,6 +245,13 @@
             <path>
               <item name="software-agents-practicals" type="b2602c69:ProjectViewProjectNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="assessment" type="462c0819:PsiDirectoryNode" />
+              <item name="task2" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="software-agents-practicals" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="misc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -249,16 +278,17 @@
     <option name="myUseExistingConsole" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\task2\examples" />
+      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\test_aaf" />
+      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\1-1\alltogether" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\task2\examples" />
       <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\argsolver\argsolverdd\common" />
       <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\argsolver\argsolverdd\structured" />
       <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\argsolver\argsolverdd\abstract" />
       <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\task1" />
-      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\argsolver\argsolverdd" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\assessment\test_aaf" />
-      <recent name="C:\Users\anima\Documents\Aberdeen\MSc_AI\CS551K_Agents\practicals\code\1-1\alltogether" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -295,14 +325,7 @@
       <workItem from="1580637843105" duration="10751000" />
       <workItem from="1580651151855" duration="240000" />
       <workItem from="1580651427124" duration="366000" />
-      <workItem from="1580652303365" duration="3117000" />
-    </task>
-    <task id="LOCAL-00071" summary="[Assessment][1a][v2] refactored into class">
-      <created>1580406432203</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1580406432203</updated>
+      <workItem from="1580652303365" duration="4849000" />
     </task>
     <task id="LOCAL-00072" summary="[Assessment][1a][v2] minor changes">
       <created>1580406618237</created>
@@ -640,11 +663,18 @@
       <option name="project" value="LOCAL" />
       <updated>1580656161423</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="[Assessment][2d] Prepare 2d - contd.">
+      <created>1580656673061</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1580656673061</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167597000" />
+    <option name="totallyTimeSpent" value="169329000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -664,13 +694,13 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067115" side_tool="true" weight="0.45184135" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49932885" visible="true" weight="0.32719547" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49932885" weight="0.3611898" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49932885" weight="0.32719547" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49932885" visible="true" weight="0.3611898" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.3442953" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.3442953" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
@@ -742,7 +772,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[Assessment][2a] Making arguments from rules - corrected" />
     <MESSAGE value="[Assessment][2a] Arguments - strict and defeasible" />
     <MESSAGE value="[Assessment][2a] Sub-arguments" />
     <MESSAGE value="[Assessment][2a] Arguments re-defined" />
@@ -767,16 +796,10 @@
     <MESSAGE value="[Assessment][2c] Restricted rebut" />
     <MESSAGE value="[Assessment][2] Argument parser" />
     <MESSAGE value="[Assessment][2d] Prepare 2d" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Assessment][2d] Prepare 2d" />
+    <MESSAGE value="[Assessment][2d] Prepare 2d - contd." />
+    <option name="LAST_COMMIT_MESSAGE" value="[Assessment][2d] Prepare 2d - contd." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/1-4/optimal_coalition.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="40" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/1-4/shapley.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -999,7 +1022,7 @@
     <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd.egg-info/requires.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/task2/tandem.gr">
+    <entry file="file://$PROJECT_DIR$/assessment/task2/examples/tandem.gr">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
@@ -1023,13 +1046,6 @@
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/task2/undercut.gr">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -1074,15 +1090,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/task2/attacks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#1#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assessment/argsolver/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1113,7 +1120,7 @@
     <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/common/misc.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
-          <caret line="14" column="52" lean-forward="true" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -1127,22 +1134,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/structured/argument.py">
+    <entry file="file://$PROJECT_DIR$/assessment/task2/examples/undercut.gr">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2144">
-          <caret line="178" column="48" selection-start-line="178" selection-start-column="48" selection-end-line="178" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assessment/task2/task2d.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+        <state relative-caret-position="185">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/task2/attacks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding>
+            <element signature="e#1#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/task2/examples/tandem2.gr">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assessment/argsolver/argsolverdd/structured/argument.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>

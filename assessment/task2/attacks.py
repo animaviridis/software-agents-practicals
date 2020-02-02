@@ -14,9 +14,10 @@ arguments = Arguments(rules)
 argnames = [a.name for a in arguments]
 
 
-def plot_graph(data, axis, title=None, color='lightblue'):
+def plot_graph(data, axis, title=None, color='lightblue', plot_disconnected=False):
     graph = nx.DiGraph()
-    graph.add_nodes_from(argnames)
+    if plot_disconnected:
+        graph.add_nodes_from(argnames)
     dnames = [tuple(d.name for d in dd) for dd in data]
     graph.add_edges_from(dnames)
     print(f"\n{len(dnames)} {title}:\n{dnames}")
