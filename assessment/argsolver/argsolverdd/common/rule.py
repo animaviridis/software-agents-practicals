@@ -1,5 +1,4 @@
 from typing import Set
-from collections import defaultdict
 
 from argsolverdd.common.atom import Atom
 from argsolverdd.common.misc import NameDict
@@ -60,33 +59,31 @@ class Rules(NameDict):
     def __init__(self, rules):
         super(Rules, self).__init__(rules)
 
-    def _compare_elitist(self, ruleset1, ruleset2) -> bool:
+    def _compare_elitist(self, other) -> bool:
         """There is some rule in set R1 which is preferred (>=) to all rules in ser R2
 
-        Return True if ruleset1 is preferred to ruleset2, False otherwise.
+        Return True if the current is preferred to the other, False otherwise.
         """
 
-        for r1 in ruleset1:
-            pref1 = self[r1.name].preferred_to
-            if all(r2 in pref1 for r2 in ruleset2):
+        for r1 in self:
+            if all(r1 >= r2 for r2 in other):
                 return True
         return False
 
-    def _compare_democratic(self, ruleset1, ruleset2) -> bool:
+    def _compare_democratic(self, other) -> bool:
         """For every rule r1 in set R1, there is a rule r2 in set R2 which is less preferred (r1 >= r2)
 
-        Return True if ruleset1 is preferred to ruleset2, False otherwise.
+        Return True if the current is preferred to the other, False otherwise.
         """
 
-        for r1 in ruleset1:
-            pref1 = self[r1.name].preferred_to
-            if not any(r2 in pref1 for r2 in ruleset2):
+        for r1 in self:
+            if not any(r1 >= r2 for r2 in other):
                 return False
         return True
 
-    def preferred_to(self, ruleset1, ruleset2, elitist=True):
+    def preferred_to(self, other, elitist=True):
         if elitist:
-            return self._compare_elitist(ruleset1, ruleset2)
+            return self._compare_elitist(other)
         else:
-            return self._compare_democratic(ruleset1, ruleset2)
+            return self._compare_democratic(other)
 

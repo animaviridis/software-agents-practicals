@@ -1,4 +1,4 @@
-from argsolverdd.common.rule import Rule
+from argsolverdd.common.rule import Rule, Rules
 from argsolverdd.common.atom import Atom
 from argsolverdd.common.misc import NameDict
 
@@ -27,12 +27,15 @@ class Argument:
     def top_rule(self):
         return self._top_rule
 
-    @property
-    def all_rules(self):
+    def _get_all_rules(self):
         r = [self._top_rule]
         for sub in self._sub_arguments:
             r.extend(sub.all_rules)
-        return r
+        return set(r)
+
+    @property
+    def all_rules(self):
+        return Rules(self._get_all_rules())
 
     @property
     def premises(self):
@@ -52,11 +55,10 @@ class Argument:
     def __repr__(self):
         if self._sub_arguments:
             prem = ', '.join((s.name for s in self._sub_arguments))
-            body = f"{prem} {'->' if self.strict else '=>'} "
         else:
-            body = ''
+            prem = ''
 
-        return f"{self.name}: {body}{self.conclusions}"
+        return f"{self.name}: {prem} {'->' if self.strict else '=>'} {self.conclusions}"
 
     def add_sub_argument(self, arg):
         if not isinstance(arg, type(self)):
