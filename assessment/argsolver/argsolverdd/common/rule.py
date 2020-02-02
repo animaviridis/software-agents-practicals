@@ -47,7 +47,7 @@ class Rule:
         if other.strict and not self.strict:
             return False
 
-        return other in self.preferred_to
+        return self not in other.preferred_to
 
     @staticmethod
     def assign_preferences(ruleset, pref_dict):
