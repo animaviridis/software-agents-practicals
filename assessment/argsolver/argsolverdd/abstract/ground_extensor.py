@@ -1,5 +1,6 @@
 import numpy as np
 from pandas import DataFrame, Series
+from copy import deepcopy
 
 from argsolverdd.abstract.parser_abstract import read_file
 
@@ -74,3 +75,6 @@ class Extensor(object):
         self.print(f"Outs: {self.label_outs}")
         self.print(f"Undec: {self.label_undec}")
 
+    def get_grounded_extension(self):
+        self.ground()
+        return sorted(self.label_ins), deepcopy(self.labels)

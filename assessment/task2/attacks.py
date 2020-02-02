@@ -5,7 +5,7 @@ from argsolverdd.common.misc import parse_cmd_args
 from argsolverdd.structured.parser import read_file
 from argsolverdd.structured.argument import Arguments
 
-pa = parse_cmd_args(add_principles=True)
+pa = parse_cmd_args(add_principles=True, add_extension=True)
 
 rules = read_file(pa.fname)
 

@@ -2,6 +2,8 @@ from argsolverdd.common.rule import Rule, Rules
 from argsolverdd.common.atom import Atom
 from argsolverdd.common.misc import NameDict
 
+from argsolverdd.abstract.stable_extensor import StableExtensor
+
 
 class Argument:
     def __init__(self, name: str, top_rule: Rule):
@@ -175,7 +177,19 @@ class Arguments(NameDict):
 
         return defeats
 
-    def evaluate(self, extension: str, **kwargs):
+    def evaluate(self, extension_code: str, **kwargs):
         defeats = self.generate_defeats(**kwargs)
-        return []
 
+        ext = StableExtensor([a.name for a in self], [tuple(d.name for d in defeat) for defeat in defeats])
+        ext.ground()
+
+        if extension_code == 'grounded':
+            extensions = [ext.get_grounded_extension()[0]]
+        elif extension_code == 'stable':
+            extensions = ext.get_stable_extensions()[0]
+        elif extension_code == 'preferred':
+            extensions = ext.get_preferred_extensions()[0]
+        else:
+            raise ValueError(f"Invalid extension code: '{extension_code}'")
+
+        return [[self[a] for a in ext] for ext in extensions]

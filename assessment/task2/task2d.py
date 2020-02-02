@@ -17,18 +17,16 @@ if pa.verbose:
 rules = read_file(pa.fname)
 
 arguments = Arguments(rules)
-defeats = arguments.generate_defeats(weakest_link=pa.weakest, elitist=pa.elitist, restricted_rebut=pa.restr)
-
 
 # semantics in the next line can be one of "grounded","preferred", or "stable"
 # returns a collection of extensions, each of which is a collection of arguments
-extensions = arguments.evaluate(pa.extension)
+extensions = arguments.evaluate(pa.extension, weakest_link=pa.weakest, elitist=pa.elitist, restricted_rebut=pa.restr)
 
 conclusions = []  # a list of lists of the conclusions
 for ext in extensions: 
         ext_conc = []  # will hold all conclusions of the extension
         for argument in ext:
-                ext_conc.append(str(argument.conclusions()))
+                ext_conc.append(str(argument.conclusions))
         ext_conc.sort()
 
         conclusions.append(ext_conc)
