@@ -51,6 +51,11 @@ class Argument:
 
         return Rules(def_rules)
 
+    def get_rules_to_compare(self, weakest_link=True):
+        if weakest_link:
+            return self.all_defeasible_rules
+        return self.last_defeasible_rules
+
     @property
     def premises(self):
         if not self._sub_arguments:
@@ -119,6 +124,12 @@ class Argument:
                 return True
         return False
 
+    def preferred_to(self, other, weakest_link=True, elitist=True):
+        """Return True if an argument is preferred (>=) to another one, False otherwise"""
+
+        r1, r2 = (a.get_rules_to_compare(weakest_link=weakest_link) for a in (self, other))
+        return r1.preferred_to(r2, elitist=elitist)
+
 
 class Arguments(NameDict):
     def __init__(self, rules):
@@ -139,8 +150,8 @@ class Arguments(NameDict):
 
     def generate_attacks(self):
         attacks = set()
-        for a1 in self.values():
-            for a2 in self.values():
+        for a1 in self:
+            for a2 in self:
                 if a1 == a2:
                     continue
 
@@ -152,5 +163,10 @@ class Arguments(NameDict):
     def generate_defeats(self, weakest_link=True, elitist=True, restricted_rebut=False):
         attacks = self.generate_attacks()
 
-        return []
+        defeats = set()
+        for a1, a2 in attacks:
+            if a1.preferred_to(a2, weakest_link=weakest_link, elitist=elitist):
+                defeats.add((a1, a2))
+
+        return defeats
 
