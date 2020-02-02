@@ -1,13 +1,10 @@
 """Analyse an abstract argumentation framework and output arguments belonging to the grounded extension."""
 
-import sys
+from argsolverdd.common.misc import parse_cmd_args
+from argsolverdd.abstract.ground_extensor import Extensor
 
-from ground_extensor import Extensor
+pa = parse_cmd_args()
 
-
-if len(sys.argv) < 2:
-    raise RuntimeError("No data file provided")
-
-ext = Extensor.from_file(sys.argv[1], verbose=False)
+ext = Extensor.from_file(pa.fname, verbose=pa.verbose)
 ext.ground()
 print(sorted(ext.label_ins))
